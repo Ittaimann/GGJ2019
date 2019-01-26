@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     protected float maxSpeed = 5f;
     [SerializeField]
-    protected float accelFactor = 25f;
+    protected float accelFactor = 250f;
     [SerializeField]
     protected float sensitivityFactor = 4f;
     private Rigidbody rigid;
@@ -23,13 +23,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        rigid.MoveRotation(rigid.rotation * Quaternion.AngleAxis(sensitivityFactor * Input.GetAxisRaw("Mouse X"), Vector3.up));
         cameraEuler.x = Mathf.Clamp(cameraEuler.x - sensitivityFactor * Input.GetAxisRaw("Mouse Y"), -80, 80);
-        cameraEuler.y += sensitivityFactor * Input.GetAxisRaw("Mouse X");
         cameraHolder.localEulerAngles = cameraEuler;
         Vector3 input = Input.GetAxisRaw("Horizontal") * cameraHolder.right + Input.GetAxisRaw("Vertical") * Vector3.ProjectOnPlane(cameraHolder.forward, Vector3.up).normalized;
         Vector2 floorInput = maxSpeed * new Vector2(input.x, input.z);
-        Vector2 floorVelocity = Vector2.MoveTowards(new Vector2(rigid.velocity.x, rigid.velocity.z), floorInput, accelFactor * Time.deltaTime);
-        rigid.velocity = new Vector3(floorVelocity.x, rigid.velocity.y, floorVelocity.y);
+        Vector3 targetVelocity = new Vector3(floorInput.x, rigid.velocity.y, floorInput.y);
+        rigid.AddForce(accelFactor * Time.deltaTime * (targetVelocity - rigid.velocity), ForceMode.Acceleration);
     }
 }

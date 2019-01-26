@@ -44,9 +44,7 @@ public class Interactable : MonoBehaviour
     /// The function that gets called when the player interacts with the object.
     /// (Object can be validated using a Component check instead of clogging up layers list.)
     /// </summary>
-    public virtual void Interact()
+    public virtual void Interact(Pickup heldObject, PlayerInteractor player)
     {
-        //for example. delete later
-        this.GetComponent<AudioSource>()?.Play();
     }
 }
