@@ -5,6 +5,7 @@ using UnityEngine;
 /// <summary>
 /// A base class for providing behaviors for interactable objects. Actual interactables should probably be children of this.
 /// </summary>
+[RequireComponent(typeof(Outline))]
 public class Interactable : MonoBehaviour
 {
     [SerializeField]
