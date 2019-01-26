@@ -8,11 +8,7 @@ public class WakeUp : MonoBehaviour
 
     public GameObject topPanel, bottomPanel, text;
     private float counter = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public PlayerMovement playerMovement;
 
     // Update is called once per frame
     void Update()
@@ -54,6 +50,7 @@ public class WakeUp : MonoBehaviour
         {
             topPanel.SetActive(false);
             bottomPanel.SetActive(false);
+            playerMovement.enabled = true;
             counter = 0;
             this.enabled = false;
         }

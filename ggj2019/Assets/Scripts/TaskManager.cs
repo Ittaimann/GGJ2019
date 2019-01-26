@@ -19,7 +19,7 @@ public class TaskManager : MonoBehaviour
         print("Day Started");
         foreach (Interactable o in objects)
         {
-            o.StartDay();
+            //o.StartDay();
         }
     }
 
