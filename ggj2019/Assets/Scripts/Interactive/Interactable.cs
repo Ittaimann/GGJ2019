@@ -42,7 +42,6 @@ public class Interactable : MonoBehaviour
 
     /// <summary>
     /// The function that gets called when the player interacts with the object.
-    /// (Object can be validated using a Component check instead of clogging up layers list.)
     /// </summary>
     public virtual void Interact(Pickup heldObject, PlayerInteractor player)
     {
