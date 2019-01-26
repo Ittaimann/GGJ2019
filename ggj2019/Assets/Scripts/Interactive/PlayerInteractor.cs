@@ -29,7 +29,7 @@ public class PlayerInteractor : MonoBehaviour
         }
         else
         {
-            Interactable hitTarget = hitInfo.transform.GetComponent<Interactable>();
+            Interactable hitTarget = hitInfo.transform.GetComponentInParent<Interactable>();
             if (hitTarget == null)
             {
                 Debug.LogError("Target missing interactable");
@@ -61,6 +61,8 @@ public class PlayerInteractor : MonoBehaviour
         }
         Destroy(joint);
         heldObject.OnDrop();
+        Rigidbody heldRigid = heldObject.GetComponentInParent<Rigidbody>();
+        heldRigid.freezeRotation = false;
         heldObject = null;
     }
 
@@ -69,12 +71,17 @@ public class PlayerInteractor : MonoBehaviour
         Drop();
         heldObject = held;
         joint = rigid.transform.AddComponent<HingeJoint>();
-        joint.connectedBody = held.GetComponentInParent<Rigidbody>();
+        Rigidbody heldRigid = held.GetComponentInParent<Rigidbody>();
+        joint.connectedBody = heldRigid;
         joint.autoConfigureConnectedAnchor = false;
         joint.anchor = heldParent.localPosition;
         joint.connectedAnchor = Vector3.zero;
         joint.enableCollision = false;
         joint.useSpring = true;
+
+        heldRigid.MoveRotation(Quaternion.identity);
+        heldRigid.freezeRotation = true;
+
         heldObject.OnPickup();
     }
 }
