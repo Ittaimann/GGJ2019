@@ -19,16 +19,16 @@ public class TaskManager : MonoBehaviour
         print("Day Started");
         foreach (Interactable o in objects)
         {
-            //o.StartDay();
+            o.StartDay();
         }
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            EndDay();
-        }
+        //if(Input.GetKeyDown(KeyCode.E))
+        //{
+        //    EndDay();
+        //}
     }
 
 

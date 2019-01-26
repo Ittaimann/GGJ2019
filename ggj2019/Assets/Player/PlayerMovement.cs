@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         rigid = GetComponent<Rigidbody>();
         cameraHolder = GetComponentInChildren<Camera>().transform;
     }
@@ -30,5 +33,11 @@ public class PlayerMovement : MonoBehaviour
         Vector2 floorInput = maxSpeed * new Vector2(input.x, input.z);
         Vector3 targetVelocity = new Vector3(floorInput.x, rigid.velocity.y, floorInput.y);
         rigid.AddForce(accelFactor * Time.deltaTime * (targetVelocity - rigid.velocity), ForceMode.Acceleration);
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 }
