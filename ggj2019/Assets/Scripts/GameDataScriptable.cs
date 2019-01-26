@@ -6,4 +6,7 @@ using UnityEngine;
 public class GameDataScriptable : ScriptableObject
 {
     public bool tookShower = false;
+    public bool usedToilet = false;
+    public bool washedDishes = false;
+    public bool turnedOffAlarm = false;
 }

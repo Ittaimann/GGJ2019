@@ -16,7 +16,6 @@ public class Shower : Interactable
     public override void Interact(Pickup heldObject, PlayerInteractor player)
     {
         gameDataScriptable.tookShower = true;
-        this.enabled = false;
     }
 
 }

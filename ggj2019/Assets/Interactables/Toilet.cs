@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class Toilet : Interactable
 {
+    public GameDataScriptable gameDataScriptable;
     AudioSource sfx;
     ParticleSystem vfx;
     // Start is called before the first frame update
@@ -21,5 +22,11 @@ public class Toilet : Interactable
         sfx.Play();
         vfx.Play();
         //bathroom complete
+    }
+
+    public override void StartDay()
+    {
+        base.StartDay();
+        gameDataScriptable.usedToilet = false;
     }
 }
