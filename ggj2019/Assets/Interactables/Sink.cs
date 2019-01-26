@@ -5,12 +5,14 @@ using UnityEngine;
 public class Sink : Interactable
 {
     private AudioSource sfx;
+    private ParticleSystem vfx;
     private Dish dish;
 
     protected override void Awake()
     {
         base.Awake();
         sfx = GetComponent<AudioSource>();
+        vfx = GetComponentInChildren<ParticleSystem>();
     }
 
     public override void Interact(Pickup heldObject, PlayerInteractor player)
@@ -25,6 +27,7 @@ public class Sink : Interactable
         {
             //dish.clean = true;
             sfx.Play();
+            vfx.Play();
         }
     }
 }
