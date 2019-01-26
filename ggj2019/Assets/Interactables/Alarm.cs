@@ -17,8 +17,17 @@ public class Alarm : Interactable
     public override void Interact(Pickup heldObject, PlayerInteractor player)
     {
         base.Interact(heldObject, player);
-        sfx.Stop();
-        interactable = false;
+        if(sfx.isPlaying)
+        {
+            sfx.Stop();
+        }
+        else
+        {
+            float alarmVolume = sfx.volume;
+            Callback.DoLerp((l) => sfx.volume = alarmVolume * l, 5f, this);
+            sfx.Play();
+
+        }
         //tick alarm complete
     }
 }
