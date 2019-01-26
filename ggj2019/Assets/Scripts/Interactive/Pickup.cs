@@ -5,6 +5,7 @@ using UnityEngine;
 /// <summary>
 /// A base class for providing behaviors for interactable objects that can be picked up. Actual interactables should probably be children of this.
 /// </summary>
+[RequireComponent(typeof(Rigidbody))]
 public class Pickup : Interactable
 {
     Collider col;
@@ -18,7 +19,6 @@ public class Pickup : Interactable
         if (heldObject == null)
         {
             player.SetHeldObject(this);
-            Debug.Log("pickup");
         }
     }
 
