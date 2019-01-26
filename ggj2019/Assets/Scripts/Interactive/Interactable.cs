@@ -19,7 +19,7 @@ public class Interactable : MonoBehaviour
 
     public bool interactable = true;
 
-    void Awake()
+    protected virtual void Awake()
     {
         // Nab outline on object, and whine if it doesn't exist.
         if (!outline)
