@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class WakeUp : MonoBehaviour
 {
 
-    public GameObject topPanel, bottomPanel;
+    public GameObject topPanel, bottomPanel, text;
     private float counter = 0;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +25,7 @@ public class WakeUp : MonoBehaviour
         {
             if(counter > 0)
             {
-                counter -= 4;
+                counter -= 3;
                 if (counter < 0)
                     counter = 0;
             }
@@ -42,11 +42,13 @@ public class WakeUp : MonoBehaviour
         {
             topPanel.transform.localPosition = new Vector3(0, 113 + (137 * modifier), 0);
             bottomPanel.transform.localPosition = new Vector3(0, -113 - (137 * modifier), 0);
+            text.SetActive(true);
         }
         else if (counter <= 430)
         {
             topPanel.transform.localPosition = new Vector3(0, 113 + (250 * modifier), 0);
             bottomPanel.transform.localPosition = new Vector3(0, -113 - (250 * modifier), 0);
+            text.SetActive(false);
         }
         else
         {
