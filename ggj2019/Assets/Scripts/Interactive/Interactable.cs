@@ -47,4 +47,12 @@ public class Interactable : MonoBehaviour
     public virtual void Interact(Pickup heldObject, PlayerInteractor player)
     {
     }
+
+    /// <summary>
+    /// Initialization called and controlled by game manager
+    /// </summary>
+    public virtual void StartDay()
+    {
+
+    }
 }
