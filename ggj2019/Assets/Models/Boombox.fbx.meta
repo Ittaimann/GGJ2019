@@ -1,73 +1,97 @@
 fileFormatVersion: 2
-guid: 5e44bb128d427dd49bc14c438d7c18d0
+guid: dd186c682eee7b44d9885031a9cfe629
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Cat:pCube1
-    100004: Head
-    100006: HeadHandle
-    100008: LBackLegHandle
-    100010: LElbow
-    100012: LFoot
-    100014: Lfoot
-    100016: LFrontLegHandle
-    100018: LHip
-    100020: LKnee
-    100022: LShoulder
-    100024: Neck
-    100026: RBackLedHandle
-    100028: Relbow
-    100030: RFoot
-    100032: RFoot 1
-    100034: RFrontLegHandle
-    100036: RHip
-    100038: RKnee
-    100040: Root
-    100042: RShoulder
-    100044: Spine1
-    100046: Spine2
-    100048: Spine3
-    100050: Spine_Handle
-    100052: Tail1
-    100054: Tail2
-    100056: Tail3
-    100058: TailHandle
+    100002: Cube
+    100004: Cube.001
+    100006: Cube.002
+    100008: Cube.003
+    100010: Cube.004
+    100012: Cube.005
+    100014: Cube.006
+    100016: Cube.007
+    100018: Cube.008
+    100020: Cube.009
+    100022: Cube.010
+    100024: Cube.011
+    100026: Cylinder
+    100028: Cylinder.001
+    100030: Cylinder.002
+    100032: Cylinder.003
+    100034: Cylinder.004
     400000: //RootNode
-    400002: Cat:pCube1
-    400004: Head
-    400006: HeadHandle
-    400008: LBackLegHandle
-    400010: LElbow
-    400012: LFoot
-    400014: Lfoot
-    400016: LFrontLegHandle
-    400018: LHip
-    400020: LKnee
-    400022: LShoulder
-    400024: Neck
-    400026: RBackLedHandle
-    400028: Relbow
-    400030: RFoot
-    400032: RFoot 1
-    400034: RFrontLegHandle
-    400036: RHip
-    400038: RKnee
-    400040: Root
-    400042: RShoulder
-    400044: Spine1
-    400046: Spine2
-    400048: Spine3
-    400050: Spine_Handle
-    400052: Tail1
-    400054: Tail2
-    400056: Tail3
-    400058: TailHandle
-    2100000: Cat_lambert2SG1
-    2100002: Cat_lambert2SG2
-    4300000: Cat:pCube1
-    9500000: //RootNode
-    13700000: Cat:pCube1
+    400002: Cube
+    400004: Cube.001
+    400006: Cube.002
+    400008: Cube.003
+    400010: Cube.004
+    400012: Cube.005
+    400014: Cube.006
+    400016: Cube.007
+    400018: Cube.008
+    400020: Cube.009
+    400022: Cube.010
+    400024: Cube.011
+    400026: Cylinder
+    400028: Cylinder.001
+    400030: Cylinder.002
+    400032: Cylinder.003
+    400034: Cylinder.004
+    2100000: No Name
+    2300000: Cube
+    2300002: Cube.001
+    2300004: Cube.002
+    2300006: Cube.003
+    2300008: Cube.004
+    2300010: Cube.005
+    2300012: Cube.006
+    2300014: Cube.007
+    2300016: Cube.008
+    2300018: Cube.009
+    2300020: Cube.010
+    2300022: Cube.011
+    2300024: Cylinder
+    2300026: Cylinder.001
+    2300028: Cylinder.002
+    2300030: Cylinder.003
+    2300032: Cylinder.004
+    3300000: Cube
+    3300002: Cube.001
+    3300004: Cube.002
+    3300006: Cube.003
+    3300008: Cube.004
+    3300010: Cube.005
+    3300012: Cube.006
+    3300014: Cube.007
+    3300016: Cube.008
+    3300018: Cube.009
+    3300020: Cube.010
+    3300022: Cube.011
+    3300024: Cylinder
+    3300026: Cylinder.001
+    3300028: Cylinder.002
+    3300030: Cylinder.003
+    3300032: Cylinder.004
+    4300000: Cube.011
+    4300002: Cube.009
+    4300004: Cube.010
+    4300006: Cube.003
+    4300008: Cylinder.004
+    4300010: Cylinder.003
+    4300012: Cylinder.002
+    4300014: Cylinder.001
+    4300016: Cylinder
+    4300018: Cube.008
+    4300020: Cube.007
+    4300022: Cube.005
+    4300024: Cube.004
+    4300026: Cube.002
+    4300028: Cube
+    4300030: Cube.006
+    4300032: Cube.001
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -99,7 +123,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -121,7 +145,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -148,7 +172,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
