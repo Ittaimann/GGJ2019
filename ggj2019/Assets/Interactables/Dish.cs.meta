@@ -3,7 +3,11 @@ guid: 4828b513bf60ffe49a239dac6a75e466
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - outline: {instanceID: 0}
+  - gameDataScriptable: {instanceID: 0}
+  - food: {instanceID: 0}
+  - dirtyTex: {fileID: 2800000, guid: 483d6e41f631fd94c93304e713401992, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
