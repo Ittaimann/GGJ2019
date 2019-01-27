@@ -27,7 +27,7 @@ public class PlayerInteractor : MonoBehaviour
     void Update()
     {
         RaycastHit hitInfo;
-        Physics.Raycast(transform.position, transform.forward, out hitInfo, 3f, LayerMask.GetMask("Interactable"));
+        Physics.Raycast(transform.position, transform.forward, out hitInfo, 3f, LayerMask.GetMask("Interactable", "Cat"), queryTriggerInteraction : QueryTriggerInteraction.Collide);
         if (hitInfo.transform == null)
         {
             //no hit

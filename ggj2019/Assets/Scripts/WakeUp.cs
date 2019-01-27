@@ -11,9 +11,9 @@ public class WakeUp : MonoBehaviour
     public PlayerMovement playerMovement;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if(Input.GetKey(KeyCode.Space))
+        if(Input.GetMouseButton(0))
         {
             counter+= 2;
         }

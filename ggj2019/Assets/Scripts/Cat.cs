@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(AudioSource))]
 public class Cat : Interactable
 {
     public List<OffMeshLink> testLinks;
@@ -20,8 +21,14 @@ public class Cat : Interactable
     private Transform test = null;
 
     private int catAngerLevel;
-    [SerializeField]
     private AudioSource meow;
+
+    [SerializeField]
+    private AudioClip[] niceMeow;
+    [SerializeField]
+    private AudioClip[] annoyedMeow;
+    [SerializeField]
+    private AudioClip[] angerMeow;
 
     public GameDataScriptable gameDataScriptable;
     public GameObject[] specialLocations;
@@ -34,6 +41,7 @@ public class Cat : Interactable
     void Start()
     {
         //validPathCoroutine = StartCoroutine(ValidPathCoroutine());
+        meow = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -120,7 +128,7 @@ public class Cat : Interactable
         gameDataScriptable.fedCat = false;
 
         StartCoroutine(GoToRandomSpecialLocation());
-        StartCoroutine(AnnoyedMeow(catAngerLevel));
+        StartCoroutine(Meow());
 
     }
 
@@ -167,25 +175,36 @@ public class Cat : Interactable
         }
     }
 
-    IEnumerator AnnoyedMeow(int intensity)
+    void DoMeow()
+    {
+        if (catAngerLevel == 0)
+        {
+            meow.PlayOneShot(niceMeow[Random.Range(0, niceMeow.Length)]);
+        }
+        else if (catAngerLevel == 1)
+        {
+            meow.PlayOneShot(annoyedMeow[Random.Range(0, annoyedMeow.Length)]);
+        }
+        else if (catAngerLevel == 2)
+        {
+            meow.PlayOneShot(angerMeow[Random.Range(0, angerMeow.Length)]);
+        }
+        meow.Play();
+    }
+
+    IEnumerator Meow()
     {
         while(catAngerLevel > 0)
         {
-            if(intensity == 0)
-            {
-                //nice meow sound
-            }
-            else if(intensity == 1)
-            {
-                //annoyed meow sound
-            }
-            else if (intensity == 2)
-            {
-                //angry meow sound
-            }
-            meow.Play();
+            DoMeow();
             yield return new WaitForSeconds(Random.Range(3f, 5f));
         }
+    }
+
+    public override void Interact(Pickup heldObject, PlayerInteractor player)
+    {
+        base.Interact(heldObject, player);
+        DoMeow();
     }
 
     IEnumerator GoToRandomSpecialLocation()
