@@ -2,6 +2,7 @@
 {
     Properties
     {
+        _mainColor("main color",Color) = (1,1,1,1)  
         _Color1 ("Color1", Color) = (1,1,1,1)
         _Color2 ("Color2", Color) = (1,1,1,1)
         _farPlaneRange("far plane range", range(0,5)) = 1
