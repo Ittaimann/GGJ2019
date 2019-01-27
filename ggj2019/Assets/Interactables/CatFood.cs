@@ -2,6 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Keys : Pickup
+public class CatFood : Pickup
 {
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
@@ -12,7 +13,16 @@ public class PlayerMovement : MonoBehaviour
     protected float sensitivityFactor = 4f;
     private Rigidbody rigid;
     private Transform cameraHolder;
+    private AudioSource foostepSource;
     public Vector3 cameraEuler = Vector3.zero;
+    private float distanceSinceLastStep;
+    Vector3 previousPosition;
+    private PlayerInteractor interactor;
+
+    [SerializeField]
+    protected float distancePerFootstep = 1.5f;
+    [SerializeField]
+    protected AudioClip[] footsteps;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +31,9 @@ public class PlayerMovement : MonoBehaviour
 
         rigid = GetComponent<Rigidbody>();
         cameraHolder = GetComponentInChildren<Camera>().transform;
+        foostepSource = GetComponent<AudioSource>();
+        previousPosition = transform.position;
+        interactor = GetComponentInChildren<PlayerInteractor>();
     }
 
     // Update is called once per frame
@@ -32,12 +45,23 @@ public class PlayerMovement : MonoBehaviour
         Vector3 input = Input.GetAxisRaw("Horizontal") * cameraHolder.right + Input.GetAxisRaw("Vertical") * Vector3.ProjectOnPlane(cameraHolder.forward, Vector3.up).normalized;
         Vector2 floorInput = maxSpeed * new Vector2(input.x, input.z);
         Vector3 targetVelocity = new Vector3(floorInput.x, rigid.velocity.y, floorInput.y);
-        rigid.AddForce(accelFactor * Time.deltaTime * (targetVelocity - rigid.velocity), ForceMode.Acceleration);
+        Vector3 force = accelFactor * Time.deltaTime * (targetVelocity - rigid.velocity);
+        rigid.AddForce(force, ForceMode.Acceleration);
 
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
+
+        distanceSinceLastStep += (transform.position - previousPosition).magnitude;
+        previousPosition = transform.position;
+
+        if(distanceSinceLastStep > distancePerFootstep)
+        {
+            foostepSource.PlayOneShot(footsteps[Random.Range(0, footsteps.Length)]);
+            distanceSinceLastStep -= distancePerFootstep;
+        }
+        interactor.UpdateHeldObject();
     }
 }
