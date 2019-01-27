@@ -28,7 +28,7 @@ public class Shower : Interactable
         var emission = steam.emission;
         steam.Play();
         player.GetComponent<PlayerMovement>().enabled = false;
-        emission.rateOverTimeMultiplier = 10;
+        emission.rateOverTimeMultiplier = 20;
 
         Vector3 initPosition = player.position;
         player.position = transform.position;
