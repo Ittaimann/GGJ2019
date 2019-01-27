@@ -2,23 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Vase : Interactable
+public class Vase : Pickup
 {
-    GameDataScriptable gameDataScriptable;
-    private MeshRenderer broken, notBroken;
+    public GameDataScriptable gameDataScriptable;
+    public GameObject broken, notBroken;
 
     public override void StartDay()
     {
-        base.StartDay();
-        if(gameDataScriptable.isBroken)
+
+        print("running?");
+        if (gameDataScriptable.isBroken)
         {
-            broken.enabled = true;
-            notBroken.enabled = false;
+            print("??");
+            broken.SetActive(true);
+            notBroken.SetActive(false);
         }
         else
         {
-            broken.enabled = false;
-            notBroken.enabled = true;
+
+            print("here");
+            broken.SetActive(false);
+            notBroken.SetActive(true);
         }
     }
 }

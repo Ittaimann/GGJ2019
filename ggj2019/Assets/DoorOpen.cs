@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorOpen : Interactable
 {
@@ -14,18 +15,27 @@ public class DoorOpen : Interactable
     }
     public override void Interact(Pickup heldObject, PlayerInteractor player)
     {
-        doorOpen();
-        base.Interact(heldObject, player);
-        if (gameDataScriptable.fedCat
-            && gameDataScriptable.gotDressed
-            && gameDataScriptable.hasEaten
-            && gameDataScriptable.tookShower
-            && gameDataScriptable.turnedOffAlarm
-            && gameDataScriptable.turnedOnLight
-            && gameDataScriptable.usedToilet
-            && gameDataScriptable.washedDishes)
+        if(heldObject is Keys)
         {
+            doorOpen();
+            base.Interact(heldObject, player);
+            if (gameDataScriptable.fedCat
+                && gameDataScriptable.gotDressed
+                && gameDataScriptable.hasEaten
+                && gameDataScriptable.tookShower
+                && gameDataScriptable.turnedOffAlarm
+                && gameDataScriptable.turnedOnLight
+                && gameDataScriptable.usedToilet
+                && gameDataScriptable.washedDishes)
+            {
+                print("you did it!");
+            }
+            else
+            {
+                SceneManager.LoadScene(0);
+            }
         }
+
     }
 
     void doorOpen() {
