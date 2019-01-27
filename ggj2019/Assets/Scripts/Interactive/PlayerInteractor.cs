@@ -71,12 +71,12 @@ public class PlayerInteractor : MonoBehaviour
         Drop();
         heldObject = held;
         joint = rigid.transform.AddComponent<HingeJoint>();
+        joint.enableCollision = false;
         Rigidbody heldRigid = held.GetComponentInParent<Rigidbody>();
         joint.connectedBody = heldRigid;
         joint.autoConfigureConnectedAnchor = false;
         joint.anchor = heldParent.localPosition;
         joint.connectedAnchor = Vector3.zero;
-        joint.enableCollision = false;
         joint.useSpring = true;
 
         heldRigid.MoveRotation(Quaternion.identity);
