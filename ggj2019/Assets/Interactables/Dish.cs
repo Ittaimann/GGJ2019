@@ -7,7 +7,6 @@ public class Dish : Pickup
 
     public bool hasFood = false, clean = true, eating = false;
     public GameDataScriptable gameDataScriptable;
-    public GameObject cookedFood;
     public GameObject food;
 
     public override void StartDay()
@@ -22,6 +21,11 @@ public class Dish : Pickup
         {
             //Dish.break;
         }
+    }
+
+    private void FixedUpdate()
+    {
+        
     }
 
     public override void OnDrop()
