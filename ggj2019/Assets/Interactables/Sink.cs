@@ -26,7 +26,7 @@ public class Sink : Interactable
             dish = heldObject as Dish;
         } else if(dish != null && (dish.transform.position - this.transform.position).magnitude < 1)
         {
-            //dish.clean = true;
+            dish.clean = true;
             sfx.Play();
             vfx.Play();
             gameDataScriptable.washedDishes = true;

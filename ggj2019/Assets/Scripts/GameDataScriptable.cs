@@ -11,4 +11,5 @@ public class GameDataScriptable : ScriptableObject
     public bool washedDishes = false;
     public bool turnedOffAlarm = false;
     public bool turnedOnLight = false;
+    public bool hasEaten = false;
 }
