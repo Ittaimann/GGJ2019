@@ -7,6 +7,8 @@ public class Dish : Pickup
 
     public bool hasFood = false, clean = true, eating = false;
     public GameDataScriptable gameDataScriptable;
+    public GameObject cookedFood;
+    public GameObject food;
 
     public override void StartDay()
     {
@@ -30,7 +32,7 @@ public class Dish : Pickup
                 StartCoroutine(Eat());
             eating = true;
         }
-        else
+        else if (!eating)
         {
             base.OnDrop();
         }
@@ -39,6 +41,7 @@ public class Dish : Pickup
     public void AddFood()
     {
         //Change the model
+        food.SetActive(true);
         print("picked up food");
         hasFood = true;
     }
@@ -51,9 +54,11 @@ public class Dish : Pickup
         print("eating");
         yield return new WaitForSeconds(3f);
         print("done");
+        food.SetActive(false);
         gameDataScriptable.hasEaten = true;
         hasFood = false;
         clean = false;
+        eating = false;
         //Camera.main.GetComponent<PlayerInteractor>().Drop();
     }
 }
