@@ -8,6 +8,13 @@ public class Cat : Interactable
 {
     public List<OffMeshLink> testLinks;
 
+    public Transform testination;
+
+    public float upAnimLoopUntilY, downAnimLoopUntilY;
+    public float jumpLoopSpeed;
+
+    [SerializeField]
+    private Animator animator;
     [SerializeField]
     private NavMeshAgent agent = null;
     [SerializeField]
@@ -28,13 +35,90 @@ public class Cat : Interactable
     public Transform FoodBowl;
 
     bool hasValidPath;
-
+    bool onOffMeshLinkCoroutineRunning;
     Coroutine validPathCoroutine;
 
     void Start()
     {
         //validPathCoroutine = StartCoroutine(ValidPathCoroutine());
         meow = GetComponent<AudioSource>();
+    }
+
+    void Update()
+    {
+        // Animate idle + walk based on movement
+        float rate = agent.desiredVelocity.magnitude/agent.speed;
+        animator.SetFloat("MoveMagnitude", Mathf.Lerp(animator.GetFloat("MoveMagnitude"), rate, 4f * Time.deltaTime));
+
+        // Track destination test obj (testination)
+        agent.destination = testination.position;
+
+        // Monitor off mesh link -- if on one, determine up/down and play anim
+        if (agent.isOnOffMeshLink && !onOffMeshLinkCoroutineRunning)
+            StartCoroutine(JumpAlongOffMeshLinkCoroutine());
+    }
+
+    IEnumerator JumpAlongOffMeshLinkCoroutine()
+    {
+        onOffMeshLinkCoroutineRunning = true;
+        OffMeshLinkData linkData = agent.currentOffMeshLinkData;
+
+        float startDist = Vector3.Distance(linkData.startPos, transform.position);
+        float endDist = Vector3.Distance(linkData.endPos, transform.position);
+
+        // Find start node and end node (end node on link can be where we start, have to check)
+        Vector3 startNode = Mathf.Min(startDist, endDist) == startDist ? linkData.startPos : linkData.endPos;
+        Vector3 endNode = startNode == linkData.startPos ? linkData.endPos : linkData.startPos;
+
+        
+        // float rotDiff = transform.eulerAngles.y -
+        // transform.RotateAround()
+        bool goingUp = startNode.y <= endNode.y;
+        bool inJumpLoop = false, afterJumpFinish = false;
+        while (true)
+        {
+            if (!animator.GetBool("FinishJump"))
+                inJumpLoop = animator.GetBool("InJumpLoop");
+            
+            if (!inJumpLoop)
+            {
+                animator.SetBool(goingUp ? "StartUpJump" : "StartDownJump", true);
+                transform.LookAt(new Vector3(endNode.x, transform.position.y, endNode.z));
+            }
+            else
+            {
+                if (!animator.GetBool("FinishJump"))
+                {
+                    Vector3 worldDeltaPosition = Vector3.MoveTowards(transform.position, endNode, jumpLoopSpeed*Time.deltaTime) - transform.position;
+                    transform.position += 0.1f*worldDeltaPosition;
+                }
+
+                Vector3 rootPos = animator.rootPosition;
+
+                if ((goingUp && (endNode.y - rootPos.y) < upAnimLoopUntilY) || (!goingUp && rootPos.y - endNode.y >= downAnimLoopUntilY))
+                {
+                    animator.SetBool("FinishJump", true);
+                    animator.SetBool(goingUp ? "StartUpJump" : "StartDownJump", false);
+                }
+            }
+            
+
+            afterJumpFinish = animator.GetBool("AfterJumpFinish");
+            if (afterJumpFinish)
+            {
+                animator.SetBool("AfterJumpFinish", false);
+                animator.SetBool("FinishJump", false);
+                animator.SetBool("InJumpLoop", false);
+                agent.CompleteOffMeshLink();
+                agent.isStopped = false;
+                transform.position = endNode;
+                onOffMeshLinkCoroutineRunning = false;
+                animator.rootPosition = endNode;
+                agent.nextPosition = endNode;
+                break;
+            }
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
     }
 
     public override void StartDay()
