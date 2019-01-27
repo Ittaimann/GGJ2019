@@ -148,10 +148,6 @@ MonoBehaviour:
   outline: {fileID: 0}
   outlineFadeDuration: 0.125
   interactable: 1
-  testLinks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   upAnimLoopUntilY: 2.6298
   downAnimLoopUntilY: 2.2236
   jumpLoopSpeed: 200
@@ -238,15 +234,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e44bb128d427dd49bc14c438d7c18d0, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e44bb128d427dd49bc14c438d7c18d0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e44bb128d427dd49bc14c438d7c18d0, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 5e44bb128d427dd49bc14c438d7c18d0, type: 3}
       propertyPath: m_LocalRotation.x
