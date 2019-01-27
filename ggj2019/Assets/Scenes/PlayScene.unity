@@ -161,7 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.5309945, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -1185,7 +1185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.47996545, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -1260,7 +1260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.5135953, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -1513,7 +1513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.6227779, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -1556,7 +1556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.5893744, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -1733,7 +1733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.601208, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -2095,7 +2095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.51359504, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -2568,7 +2568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.65787435, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -7423,7 +7423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.4738788, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -7793,7 +7793,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.5949938, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -8178,6 +8178,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6817848831028391866, guid: a763922bc0c7b944eb4b6cd7f909ee43,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817848831028391492, guid: a763922bc0c7b944eb4b6cd7f909ee43,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817848831684295883, guid: a763922bc0c7b944eb4b6cd7f909ee43,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 6817848831684295894, guid: a763922bc0c7b944eb4b6cd7f909ee43,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8228,24 +8243,9 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.25
       objectReference: {fileID: 0}
-    - target: {fileID: 6817848831028391866, guid: a763922bc0c7b944eb4b6cd7f909ee43,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 6817848831684295883, guid: a763922bc0c7b944eb4b6cd7f909ee43,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 905694175, guid: a763922bc0c7b944eb4b6cd7f909ee43, type: 3}
       propertyPath: m_Layer
       value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 6817848831028391492, guid: a763922bc0c7b944eb4b6cd7f909ee43,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a763922bc0c7b944eb4b6cd7f909ee43, type: 3}
@@ -8298,7 +8298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.5997325, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -8322,7 +8322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.52494174, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -8435,7 +8435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.46176243, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -8525,16 +8525,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cat
       objectReference: {fileID: 0}
-    - target: {fileID: 4957515560906219775, guid: 7fa13693afec1bc48b93ee2238b21394,
-        type: 3}
-      propertyPath: m_Layer
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957515560906219775, guid: 7fa13693afec1bc48b93ee2238b21394,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4957515560906219763, guid: 7fa13693afec1bc48b93ee2238b21394,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8590,42 +8580,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4957515560906219774, guid: 7fa13693afec1bc48b93ee2238b21394,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957515560906219761, guid: 7fa13693afec1bc48b93ee2238b21394,
-        type: 3}
-      propertyPath: m_StoppingDistance
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957515560906219761, guid: 7fa13693afec1bc48b93ee2238b21394,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957515560906219762, guid: 7fa13693afec1bc48b93ee2238b21394,
-        type: 3}
-      propertyPath: specialLocations.Array.size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4957515560906219762, guid: 7fa13693afec1bc48b93ee2238b21394,
         type: 3}
       propertyPath: test
       value: 
       objectReference: {fileID: 472185956}
-    - target: {fileID: 4957515560906219762, guid: 7fa13693afec1bc48b93ee2238b21394,
-        type: 3}
-      propertyPath: gameDataScriptable
-      value: 
-      objectReference: {fileID: 11400000, guid: 2e6038bd3db6d174b916e37de4815a14,
-        type: 2}
-    - target: {fileID: 4957515560906219762, guid: 7fa13693afec1bc48b93ee2238b21394,
-        type: 3}
-      propertyPath: litterBox
-      value: 
-      objectReference: {fileID: 1748562992}
     - target: {fileID: 4957515560906219762, guid: 7fa13693afec1bc48b93ee2238b21394,
         type: 3}
       propertyPath: specialLocations.Array.data[0]
@@ -8651,11 +8610,6 @@ PrefabInstance:
       propertyPath: specialLocations.Array.data[4]
       value: 
       objectReference: {fileID: 915731043}
-    - target: {fileID: 4957515560906219762, guid: 7fa13693afec1bc48b93ee2238b21394,
-        type: 3}
-      propertyPath: outline
-      value: 
-      objectReference: {fileID: 1109033869}
     - target: {fileID: 4957515560906219762, guid: 7fa13693afec1bc48b93ee2238b21394,
         type: 3}
       propertyPath: FoodBowl
@@ -9133,7 +9087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.5122582, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -9180,7 +9134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.51373154, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -9448,30 +9402,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.32979, y: 0.6790041, z: 1.0518247}
   m_Center: {x: -2.4526772, y: -1.8903887, z: 1.5501428}
---- !u!1 &1109033868 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4957515560906219775, guid: 7fa13693afec1bc48b93ee2238b21394,
-    type: 3}
-  m_PrefabInstance: {fileID: 885999307}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1109033869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109033868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 0.5423231, b: 0, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &1111859563
 GameObject:
   m_ObjectHideFlags: 0
@@ -9799,7 +9729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.6096754, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -15212,7 +15142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.7533744, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -15336,7 +15266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.59399676, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -15887,7 +15817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.6866405, b: 0.08962262, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -16171,7 +16101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 0.56688875, b: 0, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -16828,7 +16758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -17029,16 +16959,6 @@ PrefabInstance:
       propertyPath: FoodBowl
       value: 
       objectReference: {fileID: 749868807}
-    - target: {fileID: 647639245616051620, guid: 4f59f3330f9fe6146bd960df531e6946,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.038
-      objectReference: {fileID: 0}
-    - target: {fileID: 647639245616051620, guid: 4f59f3330f9fe6146bd960df531e6946,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.08
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f59f3330f9fe6146bd960df531e6946, type: 3}
 --- !u!1001 &7971102979655712018
