@@ -1,23 +1,16 @@
 fileFormatVersion: 2
-guid: ae3eff2695283fb4cadb06f84da79e3c
+guid: 7e353c1b29afa4f489a0c15f71588e3f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: pPlane1
+    100000: Rug
     100002: //RootNode
-    100004: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    400000: pPlane1
+    400000: Rug
     400002: //RootNode
-    400004: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    2100000: initialShadingGroup
-    2100002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1Mat
-    2100004: pPlane1Mat
-    2300000: pPlane1
-    2300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    3300000: pPlane1
-    3300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    4300000: pPlane1
-    4300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
+    2100000: RugMat
+    2300000: Rug
+    3300000: Rug
+    4300000: Rug
   externalObjects: {}
   materials:
     importMaterials: 1

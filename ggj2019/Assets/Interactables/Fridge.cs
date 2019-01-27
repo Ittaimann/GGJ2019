@@ -2,20 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fridge : MonoBehaviour
+public class Fridge : Interactable
 {
     [SerializeField]
-    protected GameObject foodPrefab;
+    protected RawFood foodPrefab;
 
-    // Start is called before the first frame update
-    void Start()
+    public override void Interact(Pickup heldObject, PlayerInteractor player)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (heldObject is RawFood)
+            return;
+        player.Drop();
+        player.SetHeldObject(Instantiate(foodPrefab, player.transform.position, Quaternion.identity));
     }
 }

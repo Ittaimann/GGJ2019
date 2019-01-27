@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: 48565e96520846f45a2ed9db7b6211e6
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: group28
+    100004: KitchenCounter_group15_pasted__group13_pasted__pasted__pCube15
+    100006: KitchenCounter_group15_pasted__pasted__pasted__pCube15_pasted__pasted__group_pasted__group13
+    100008: KitchenCounter_group15_pasted__pasted__pCube15_pasted__group
+    100010: KitchenCounter_pasted__pasted__pasted__pCube15
+    100012: KitchenCounter_pasted__pCube15
+    100014: KitchenCounter_pasted__pCube15_group15
+    100016: KitchenCounter_pasted__pCube16
+    100018: KitchenCounter_pCube15
+    100020: KitchenCounter_polySurface2
+    100022: pasted__pasted__pCube15_KitchenCounter
+    100024: pasted__pasted__pCube15_pasted__group13_group14
+    400000: //RootNode
+    400002: group28
+    400004: KitchenCounter_group15_pasted__group13_pasted__pasted__pCube15
+    400006: KitchenCounter_group15_pasted__pasted__pasted__pCube15_pasted__pasted__group_pasted__group13
+    400008: KitchenCounter_group15_pasted__pasted__pCube15_pasted__group
+    400010: KitchenCounter_pasted__pasted__pasted__pCube15
+    400012: KitchenCounter_pasted__pCube15
+    400014: KitchenCounter_pasted__pCube15_group15
+    400016: KitchenCounter_pasted__pCube16
+    400018: KitchenCounter_pCube15
+    400020: KitchenCounter_polySurface2
+    400022: pasted__pasted__pCube15_KitchenCounter
+    400024: pasted__pasted__pCube15_pasted__group13_group14
+    2100000: group28Mat
+    2100002: KitchenCounter_group15_pasted__group13_pasted__pasted__pCube15Mat
+    2100004: KitchenCounter_group15_pasted__pasted__pasted__pCube15_pasted__pasted__group_pasted__group13Mat
+    2100006: KitchenCounter_group15_pasted__pasted__pCube15_pasted__groupMat
+    2100008: KitchenCounter_pasted__pasted__pasted__pCube15Mat
+    2100010: KitchenCounter_pasted__pCube15Mat
+    2100012: KitchenCounter_pasted__pCube15_group15Mat
+    2100014: KitchenCounter_pasted__pCube16Mat
+    2100016: KitchenCounter_pCube15Mat
+    2100018: KitchenCounter_polySurface2Mat
+    2100020: pasted__pasted__pCube15_KitchenCounterMat
+    2100022: pasted__pasted__pCube15_pasted__group13_group14Mat
+    2300000: group28
+    2300002: KitchenCounter_group15_pasted__group13_pasted__pasted__pCube15
+    2300004: KitchenCounter_group15_pasted__pasted__pasted__pCube15_pasted__pasted__group_pasted__group13
+    2300006: KitchenCounter_group15_pasted__pasted__pCube15_pasted__group
+    2300008: KitchenCounter_pasted__pasted__pasted__pCube15
+    2300010: KitchenCounter_pasted__pCube15
+    2300012: KitchenCounter_pasted__pCube15_group15
+    2300014: KitchenCounter_pasted__pCube16
+    2300016: KitchenCounter_pCube15
+    2300018: KitchenCounter_polySurface2
+    2300020: pasted__pasted__pCube15_KitchenCounter
+    2300022: pasted__pasted__pCube15_pasted__group13_group14
+    3300000: group28
+    3300002: KitchenCounter_group15_pasted__group13_pasted__pasted__pCube15
+    3300004: KitchenCounter_group15_pasted__pasted__pasted__pCube15_pasted__pasted__group_pasted__group13
+    3300006: KitchenCounter_group15_pasted__pasted__pCube15_pasted__group
+    3300008: KitchenCounter_pasted__pasted__pasted__pCube15
+    3300010: KitchenCounter_pasted__pCube15
+    3300012: KitchenCounter_pasted__pCube15_group15
+    3300014: KitchenCounter_pasted__pCube16
+    3300016: KitchenCounter_pCube15
+    3300018: KitchenCounter_polySurface2
+    3300020: pasted__pasted__pCube15_KitchenCounter
+    3300022: pasted__pasted__pCube15_pasted__group13_group14
+    4300000: group28
+    4300002: KitchenCounter_group15_pasted__group13_pasted__pasted__pCube15
+    4300004: KitchenCounter_group15_pasted__pasted__pasted__pCube15_pasted__pasted__group_pasted__group13
+    4300006: KitchenCounter_group15_pasted__pasted__pCube15_pasted__group
+    4300008: KitchenCounter_pasted__pasted__pasted__pCube15
+    4300010: KitchenCounter_pasted__pCube15
+    4300012: KitchenCounter_pasted__pCube15_group15
+    4300014: KitchenCounter_pasted__pCube16
+    4300016: KitchenCounter_pCube15
+    4300018: KitchenCounter_polySurface2
+    4300020: pasted__pasted__pCube15_KitchenCounter
+    4300022: pasted__pasted__pCube15_pasted__group13_group14
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

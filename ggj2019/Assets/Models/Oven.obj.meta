@@ -1,23 +1,22 @@
 fileFormatVersion: 2
-guid: ae3eff2695283fb4cadb06f84da79e3c
+guid: c9cca6162c70e9842aa9ef0718b17407
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: pPlane1
-    100002: //RootNode
-    100004: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    400000: pPlane1
-    400002: //RootNode
-    400004: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    2100000: initialShadingGroup
-    2100002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1Mat
-    2100004: pPlane1Mat
-    2300000: pPlane1
-    2300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    3300000: pPlane1
-    3300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    4300000: pPlane1
-    4300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
+    100000: //RootNode
+    100002: RFAIPP_Gas_Stove_Base
+    100004: RFAIPP_Gas_Stove_Door
+    400000: //RootNode
+    400002: RFAIPP_Gas_Stove_Base
+    400004: RFAIPP_Gas_Stove_Door
+    2100000: RFAIPP_Gas_Stove_BaseMat
+    2100002: RFAIPP_Gas_Stove_DoorMat
+    2300000: RFAIPP_Gas_Stove_Base
+    2300002: RFAIPP_Gas_Stove_Door
+    3300000: RFAIPP_Gas_Stove_Base
+    3300002: RFAIPP_Gas_Stove_Door
+    4300000: RFAIPP_Gas_Stove_Base
+    4300002: RFAIPP_Gas_Stove_Door
   externalObjects: {}
   materials:
     importMaterials: 1

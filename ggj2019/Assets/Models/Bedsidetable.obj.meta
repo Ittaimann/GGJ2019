@@ -1,23 +1,28 @@
 fileFormatVersion: 2
-guid: ae3eff2695283fb4cadb06f84da79e3c
+guid: 0d6e0a7dbf82e0944acd2bfee3d47e36
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: pPlane1
+    100000: Alarm
     100002: //RootNode
-    100004: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    400000: pPlane1
+    100004: NightStand
+    100006: table_lamp4
+    400000: Alarm
     400002: //RootNode
-    400004: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    2100000: initialShadingGroup
-    2100002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1Mat
-    2100004: pPlane1Mat
-    2300000: pPlane1
-    2300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    3300000: pPlane1
-    3300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    4300000: pPlane1
-    4300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
+    400004: NightStand
+    400006: table_lamp4
+    2100000: AlarmMat
+    2100002: NightStandMat
+    2100004: table_lamp4Mat
+    2300000: Alarm
+    2300002: NightStand
+    2300004: table_lamp4
+    3300000: Alarm
+    3300002: NightStand
+    3300004: table_lamp4
+    4300000: Alarm
+    4300002: NightStand
+    4300004: table_lamp4
   externalObjects: {}
   materials:
     importMaterials: 1

@@ -1,26 +1,49 @@
 fileFormatVersion: 2
-guid: ae3eff2695283fb4cadb06f84da79e3c
+guid: 7a74bbbae5bf873439e6f399d1df0161
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: pPlane1
+    100000: Fridge
     100002: //RootNode
-    100004: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    400000: pPlane1
+    100004: Fridge_pasted__pasted__pCube9_pasted__group3_group4
+    100006: Fridge_pasted__pCube9_group3
+    100008: Fridge_pCube10
+    100010: Fridge_pCube9
+    100012: pasted__pCube10_group2_Fridge
+    400000: Fridge
     400002: //RootNode
-    400004: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    2100000: initialShadingGroup
-    2100002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1Mat
-    2100004: pPlane1Mat
-    2300000: pPlane1
-    2300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    3300000: pPlane1
-    3300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    4300000: pPlane1
-    4300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
+    400004: Fridge_pasted__pasted__pCube9_pasted__group3_group4
+    400006: Fridge_pasted__pCube9_group3
+    400008: Fridge_pCube10
+    400010: Fridge_pCube9
+    400012: pasted__pCube10_group2_Fridge
+    2100000: FridgeMat
+    2100002: Fridge_pasted__pasted__pCube9_pasted__group3_group4Mat
+    2100004: Fridge_pasted__pCube9_group3Mat
+    2100006: Fridge_pCube10Mat
+    2100008: Fridge_pCube9Mat
+    2100010: pasted__pCube10_group2_FridgeMat
+    2300000: Fridge
+    2300002: Fridge_pasted__pasted__pCube9_pasted__group3_group4
+    2300004: Fridge_pasted__pCube9_group3
+    2300006: Fridge_pCube10
+    2300008: Fridge_pCube9
+    2300010: pasted__pCube10_group2_Fridge
+    3300000: Fridge
+    3300002: Fridge_pasted__pasted__pCube9_pasted__group3_group4
+    3300004: Fridge_pasted__pCube9_group3
+    3300006: Fridge_pCube10
+    3300008: Fridge_pCube9
+    3300010: pasted__pCube10_group2_Fridge
+    4300000: Fridge
+    4300002: Fridge_pasted__pasted__pCube9_pasted__group3_group4
+    4300004: Fridge_pasted__pCube9_group3
+    4300006: Fridge_pCube10
+    4300008: Fridge_pCube9
+    4300010: pasted__pCube10_group2_Fridge
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -80,7 +103,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

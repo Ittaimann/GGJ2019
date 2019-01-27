@@ -1,23 +1,16 @@
 fileFormatVersion: 2
-guid: ae3eff2695283fb4cadb06f84da79e3c
+guid: 01ec78b9c8feb284dbb13d5fb95b11bb
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: pPlane1
+    100000: coffee_table
     100002: //RootNode
-    100004: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    400000: pPlane1
+    400000: coffee_table
     400002: //RootNode
-    400004: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    2100000: initialShadingGroup
-    2100002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1Mat
-    2100004: pPlane1Mat
-    2300000: pPlane1
-    2300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    3300000: pPlane1
-    3300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    4300000: pPlane1
-    4300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
+    2100000: coffee_tableMat
+    2300000: coffee_table
+    3300000: coffee_table
+    4300000: coffee_table
   externalObjects: {}
   materials:
     importMaterials: 1

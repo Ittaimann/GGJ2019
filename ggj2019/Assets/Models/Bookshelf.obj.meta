@@ -1,23 +1,16 @@
 fileFormatVersion: 2
-guid: ae3eff2695283fb4cadb06f84da79e3c
+guid: 7f688fee5c219e24abaf3f572059b45a
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: pPlane1
-    100002: //RootNode
-    100004: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    400000: pPlane1
-    400002: //RootNode
-    400004: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    2100000: initialShadingGroup
-    2100002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1Mat
-    2100004: pPlane1Mat
-    2300000: pPlane1
-    2300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    3300000: pPlane1
-    3300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    4300000: pPlane1
-    4300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
+    100000: //RootNode
+    100002: RFAIPP_Bookcase_2
+    400000: //RootNode
+    400002: RFAIPP_Bookcase_2
+    2100000: RFAIPP_Bookcase_2Mat
+    2300000: RFAIPP_Bookcase_2
+    3300000: RFAIPP_Bookcase_2
+    4300000: RFAIPP_Bookcase_2
   externalObjects: {}
   materials:
     importMaterials: 1

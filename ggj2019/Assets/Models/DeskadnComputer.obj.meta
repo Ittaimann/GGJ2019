@@ -1,23 +1,28 @@
 fileFormatVersion: 2
-guid: ae3eff2695283fb4cadb06f84da79e3c
+guid: 565e87c1af008974496eadab5d594b83
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: pPlane1
-    100002: //RootNode
-    100004: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    400000: pPlane1
-    400002: //RootNode
-    400004: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    2100000: initialShadingGroup
-    2100002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1Mat
-    2100004: pPlane1Mat
-    2300000: pPlane1
-    2300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    3300000: pPlane1
-    3300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    4300000: pPlane1
-    4300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
+    100000: Computer
+    100002: desk
+    100004: //RootNode
+    100006: Keyboard
+    400000: Computer
+    400002: desk
+    400004: //RootNode
+    400006: Keyboard
+    2100000: ComputerMat
+    2100002: deskMat
+    2100004: KeyboardMat
+    2300000: Computer
+    2300002: desk
+    2300004: Keyboard
+    3300000: Computer
+    3300002: desk
+    3300004: Keyboard
+    4300000: Computer
+    4300002: desk
+    4300004: Keyboard
   externalObjects: {}
   materials:
     importMaterials: 1

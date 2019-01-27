@@ -1,23 +1,40 @@
 fileFormatVersion: 2
-guid: ae3eff2695283fb4cadb06f84da79e3c
+guid: adef1260cb51e714abb78d8f3dccdc56
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: pPlane1
+    100000: Dresser
     100002: //RootNode
-    100004: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    400000: pPlane1
+    100004: Dresser_pCube6
+    100006: Dresser_pCube6_group_pasted__pCube7_group1
+    100008: Dresser_pCube6_group_pCube7
+    100010: Dresser_pCube6_pasted__pCube6_group
+    400000: Dresser
     400002: //RootNode
-    400004: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    2100000: initialShadingGroup
-    2100002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1Mat
-    2100004: pPlane1Mat
-    2300000: pPlane1
-    2300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    3300000: pPlane1
-    3300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
-    4300000: pPlane1
-    4300002: defaultHideFaceDataSet_outputCloth3HiddenFacesSet_pPlane1
+    400004: Dresser_pCube6
+    400006: Dresser_pCube6_group_pasted__pCube7_group1
+    400008: Dresser_pCube6_group_pCube7
+    400010: Dresser_pCube6_pasted__pCube6_group
+    2100000: DresserMat
+    2100002: Dresser_pCube6Mat
+    2100004: Dresser_pCube6_group_pasted__pCube7_group1Mat
+    2100006: Dresser_pCube6_group_pCube7Mat
+    2100008: Dresser_pCube6_pasted__pCube6_groupMat
+    2300000: Dresser
+    2300002: Dresser_pCube6
+    2300004: Dresser_pCube6_group_pasted__pCube7_group1
+    2300006: Dresser_pCube6_group_pCube7
+    2300008: Dresser_pCube6_pasted__pCube6_group
+    3300000: Dresser
+    3300002: Dresser_pCube6
+    3300004: Dresser_pCube6_group_pasted__pCube7_group1
+    3300006: Dresser_pCube6_group_pCube7
+    3300008: Dresser_pCube6_pasted__pCube6_group
+    4300000: Dresser
+    4300002: Dresser_pCube6
+    4300004: Dresser_pCube6_group_pasted__pCube7_group1
+    4300006: Dresser_pCube6_group_pCube7
+    4300008: Dresser_pCube6_pasted__pCube6_group
   externalObjects: {}
   materials:
     importMaterials: 1
