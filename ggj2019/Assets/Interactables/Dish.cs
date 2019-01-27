@@ -5,7 +5,7 @@ using UnityEngine;
 public class Dish : Pickup
 {
 
-    public bool hasFood = false, clean = true;
+    public bool hasFood = false, clean = true, eating = false;
     public GameDataScriptable gameDataScriptable;
 
     public override void StartDay()
@@ -22,6 +22,20 @@ public class Dish : Pickup
         }
     }
 
+    public override void OnDrop()
+    {
+        if (hasFood)
+        {
+            if (!eating)
+                StartCoroutine(Eat());
+            eating = true;
+        }
+        else
+        {
+            base.OnDrop();
+        }
+    }
+
     public void AddFood()
     {
         //Change the model
@@ -29,10 +43,17 @@ public class Dish : Pickup
         hasFood = true;
     }
 
-    public void Eat()
+    private IEnumerator Eat()
     {
+        yield return new WaitForEndOfFrame();
+        Camera.main.GetComponent<PlayerInteractor>().SetHeldObject(this, false);
+        //Play sound of coffee drinking
+        print("eating");
+        yield return new WaitForSeconds(3f);
+        print("done");
+        gameDataScriptable.hasEaten = true;
         hasFood = false;
         clean = false;
-        gameDataScriptable.hasEaten = true;
+        //Camera.main.GetComponent<PlayerInteractor>().Drop();
     }
 }
