@@ -14,6 +14,11 @@ public class CoffeeCup : Pickup
         gameDataScriptable.drankCoffee = false;
     }
 
+    private void FixedUpdate()
+    {
+        transform.GetChild(0).gameObject.SetActive(hasCoffee);
+    }
+
     public override void OnDrop()
     {
         if(hasCoffee)
