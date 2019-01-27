@@ -7,10 +7,11 @@ public class TaskManager : MonoBehaviour
 {
 
     //public ScriptableObject gameData;
-    public Interactable[] objects;
+    private Interactable[] objects;
 
     private void Start()
     {
+        objects = FindObjectsOfType<Interactable>();
         StartDay();
     }
 
