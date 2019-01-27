@@ -12,6 +12,7 @@ ModelImporter:
     400004: lid
     400006: //RootNode
     2100000: lambert1
+    2100002: lambert2
     2300000: body
     2300002: flush
     2300004: lid

@@ -1,82 +1,28 @@
 fileFormatVersion: 2
-guid: b39fba9570f26e44fbb6c97fc1ec500c
+guid: 565e87c1af008974496eadab5d594b83
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: nonSlideDoor
-    100002: pCube3
+    100000: Computer
+    100002: desk
     100004: //RootNode
-    100006: ShowerHead
-    100008: SlideDoor
-    100010: TopRim
-    100012: wall
-    100014: waterHandle
-    100016: Shower:nonSlideDoor
-    100018: Shower:pCube3
-    100020: Shower:ShowerHead
-    100022: Shower:SlideDoor
-    100024: Shower:TopRim
-    100026: Shower:wall
-    100028: Shower:waterHandle
-    400000: nonSlideDoor
-    400002: pCube3
+    100006: Keyboard
+    400000: Computer
+    400002: desk
     400004: //RootNode
-    400006: ShowerHead
-    400008: SlideDoor
-    400010: TopRim
-    400012: wall
-    400014: waterHandle
-    400016: Shower:nonSlideDoor
-    400018: Shower:pCube3
-    400020: Shower:ShowerHead
-    400022: Shower:SlideDoor
-    400024: Shower:TopRim
-    400026: Shower:wall
-    400028: Shower:waterHandle
-    2100000: lambert1
-    2100002: lambert3
-    2300000: nonSlideDoor
-    2300002: pCube3
-    2300004: ShowerHead
-    2300006: SlideDoor
-    2300008: TopRim
-    2300010: wall
-    2300012: waterHandle
-    2300014: Shower:nonSlideDoor
-    2300016: Shower:pCube3
-    2300018: Shower:ShowerHead
-    2300020: Shower:SlideDoor
-    2300022: Shower:TopRim
-    2300024: Shower:wall
-    2300026: Shower:waterHandle
-    3300000: nonSlideDoor
-    3300002: pCube3
-    3300004: ShowerHead
-    3300006: SlideDoor
-    3300008: TopRim
-    3300010: wall
-    3300012: waterHandle
-    3300014: Shower:nonSlideDoor
-    3300016: Shower:pCube3
-    3300018: Shower:ShowerHead
-    3300020: Shower:SlideDoor
-    3300022: Shower:TopRim
-    3300024: Shower:wall
-    3300026: Shower:waterHandle
-    4300000: TopRim
-    4300002: pCube3
-    4300004: ShowerHead
-    4300006: waterHandle
-    4300008: wall
-    4300010: nonSlideDoor
-    4300012: SlideDoor
-    4300014: Shower:waterHandle
-    4300016: Shower:ShowerHead
-    4300018: Shower:pCube3
-    4300020: Shower:TopRim
-    4300022: Shower:nonSlideDoor
-    4300024: Shower:SlideDoor
-    4300026: Shower:wall
+    400006: Keyboard
+    2100000: ComputerMat
+    2100002: deskMat
+    2100004: KeyboardMat
+    2300000: Computer
+    2300002: desk
+    2300004: Keyboard
+    3300000: Computer
+    3300002: desk
+    3300004: Keyboard
+    4300000: Computer
+    4300002: desk
+    4300004: Keyboard
   externalObjects: {}
   materials:
     importMaterials: 1
