@@ -5,12 +5,11 @@ using UnityEngine;
 public class Lamp : Interactable
 {
     public GameDataScriptable gameDataScriptable;
-    private Light lampLight;
+    public Light lampLight;
 
     protected override void Awake()
     {
         base.Awake();
-        lampLight = GetComponentInChildren<Light>();
         lampLight.enabled = false;
     }
 

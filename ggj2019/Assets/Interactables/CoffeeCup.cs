@@ -22,7 +22,7 @@ public class CoffeeCup : Pickup
                 StartCoroutine(DrinkCoffee());
             drinking = true;
         }
-        else
+        else if (!drinking)
         {
             base.OnDrop();
         }
@@ -38,6 +38,7 @@ public class CoffeeCup : Pickup
         print("done");
         gameDataScriptable.drankCoffee = true;
         hasCoffee = false;
-        Camera.main.GetComponent<PlayerInteractor>().Drop();
+        drinking = false;
+        //Camera.main.GetComponent<PlayerInteractor>().Drop();
     }
 }
