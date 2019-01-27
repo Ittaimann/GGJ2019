@@ -5,7 +5,7 @@
         _mainColor("main color",Color) = (1,1,1,1)  
         _Color1 ("Color1", Color) = (1,1,1,1)
         _Color2 ("Color2", Color) = (1,1,1,1)
-        _farPlaneRange("far plane range", range(0,5)) = 1
+        _farPlaneRange("far plane range", range(0,10)) = 1
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Metallic ("Metallic", Range(0,1)) = 0.0
     }
