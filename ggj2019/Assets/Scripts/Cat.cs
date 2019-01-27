@@ -40,8 +40,9 @@ public class Cat : Interactable
         meow = GetComponent<AudioSource>();
     }
 
-    void Update()
+    protected override void Update()
     {
+        base.Update();
         // Animate idle + walk based on movement
         float rate = agent.desiredVelocity.magnitude/agent.speed;
         animator.SetFloat("MoveMagnitude", Mathf.Lerp(animator.GetFloat("MoveMagnitude"), rate, 4f * Time.deltaTime));

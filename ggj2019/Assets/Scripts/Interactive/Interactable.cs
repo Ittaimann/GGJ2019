@@ -34,7 +34,7 @@ public class Interactable : MonoBehaviour
         outlined = lookedAt && interactable;
     }
 
-    void Update()
+    protected virtual void Update()
     {
         //inefficient in running every update, but game jam
         currentOutlineStrengthLerp = Mathf.MoveTowards(currentOutlineStrengthLerp, outlined ? 1 : 0, Time.deltaTime / outlineFadeDuration);
