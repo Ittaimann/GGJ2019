@@ -6,10 +6,6 @@ using UnityEngine.AI;
 [RequireComponent(typeof(AudioSource))]
 public class Cat : Interactable
 {
-    public List<OffMeshLink> testLinks;
-
-    public Transform testination;
-
     public float upAnimLoopUntilY, downAnimLoopUntilY;
     public float jumpLoopSpeed;
 
@@ -49,9 +45,6 @@ public class Cat : Interactable
         // Animate idle + walk based on movement
         float rate = agent.desiredVelocity.magnitude/agent.speed;
         animator.SetFloat("MoveMagnitude", Mathf.Lerp(animator.GetFloat("MoveMagnitude"), rate, 4f * Time.deltaTime));
-
-        // Track destination test obj (testination)
-        agent.destination = testination.position;
 
         // Monitor off mesh link -- if on one, determine up/down and play anim
         if (agent.isOnOffMeshLink && !onOffMeshLinkCoroutineRunning)
@@ -167,10 +160,10 @@ public class Cat : Interactable
             agent.CalculatePath(agent.destination, agent.path);
             hasValidPath = agent.path.status == NavMeshPathStatus.PathComplete;
 
-            foreach (OffMeshLink link in testLinks)
-            {
-                link.UpdatePositions();
-            }
+            // foreach (OffMeshLink link in testLinks)
+            // {
+            //     link.UpdatePositions();
+            // }
             yield return new WaitForSeconds(0.1f);
         }
     }
