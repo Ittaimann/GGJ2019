@@ -14,7 +14,7 @@ public class Dish : Pickup
 
     private void Start()
     {
-        meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer = GetComponentInChildren<MeshRenderer>();
     }
 
     public override void StartDay()

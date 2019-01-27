@@ -52,6 +52,17 @@ public class WakeUp : MonoBehaviour
             bottomPanel.SetActive(false);
             playerMovement.enabled = true;
             counter = 0;
+
+            // UGGO METHOD - Turn on Boombox
+            GameObject go = GameObject.Find("Boombox");
+            if (go)
+            {
+                Boombox bb = go.GetComponent<Boombox>();
+                if (bb)
+                {
+                    bb.TurnOn();
+                }
+            }
             this.enabled = false;
         }
 
