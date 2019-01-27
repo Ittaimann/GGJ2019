@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shower : Interactable
+public class Dresser : Interactable
 {
     public GameDataScriptable gameDataScriptable;
 
@@ -10,15 +10,12 @@ public class Shower : Interactable
     public override void StartDay()
     {
         base.StartDay();
-        gameDataScriptable.tookShower = false;
+        gameDataScriptable.gotDressed = false;
     }
 
     public override void Interact(Pickup heldObject, PlayerInteractor player)
     {
-        if (gameDataScriptable.gotDressed)
-            gameDataScriptable.gotDressed = false;
-        gameDataScriptable.tookShower = true;
+        gameDataScriptable.gotDressed = true;
         this.enabled = false;
     }
-
 }

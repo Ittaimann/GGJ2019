@@ -6,4 +6,5 @@ using UnityEngine;
 public class GameDataScriptable : ScriptableObject
 {
     public bool tookShower = false;
+    public bool gotDressed = false;
 }
