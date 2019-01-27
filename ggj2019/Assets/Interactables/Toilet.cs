@@ -26,7 +26,7 @@ public class Toilet : Interactable
         if (!canUse)
             return;
         gameDataScriptable.usedToilet = true;
-        StartCoroutine(UseToilet());
+        StartCoroutine(UseToilet(player.transform.parent.gameObject));
 
         //bathroom complete
     }
@@ -37,10 +37,12 @@ public class Toilet : Interactable
         gameDataScriptable.usedToilet = false;
     }
 
-    private IEnumerator UseToilet()
+    private IEnumerator UseToilet(GameObject player)
     {
         canUse = false;
         float angle = 0;
+
+        player.GetComponent<PlayerMovement>().enabled = false;
         while(angle < 90)
         {
             lidHinge.transform.rotation = Quaternion.Euler(angle, 0, 0);
@@ -57,6 +59,7 @@ public class Toilet : Interactable
             yield return new WaitForSeconds(0.01f);
         }
         lidHinge.transform.rotation = Quaternion.identity;
+        player.GetComponent<PlayerMovement>().enabled = true;
         canUse = true;
     }
 }
