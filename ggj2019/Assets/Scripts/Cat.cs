@@ -17,6 +17,8 @@ public class Cat : Interactable
     private AudioSource meow;
 
     public GameDataScriptable gameDataScriptable;
+    public GameObject[] specialLocations;
+    public Transform FoodBowl;
 
     bool hasValidPath;
 
@@ -24,29 +26,18 @@ public class Cat : Interactable
 
     void Start()
     {
-        validPathCoroutine = StartCoroutine(ValidPathCoroutine());
+        //validPathCoroutine = StartCoroutine(ValidPathCoroutine());
     }
 
     public override void StartDay()
     {
         base.StartDay();
         catAngerLevel = gameDataScriptable.catAngerLevel;
+        gameDataScriptable.fedCat = false;
 
-        if(catAngerLevel > 0)
-        {
-            StartCoroutine(AnnoyedMeow(1));
-        }
-        else if(catAngerLevel > 1)
-        {
-            StartCoroutine(AnnoyedMeow(2));
-        }
+        StartCoroutine(GoToRandomSpecialLocation());
+        StartCoroutine(AnnoyedMeow(catAngerLevel));
 
-
-    }
-
-    void Update()
-    {
-        agent.destination = test.position;
     }
 
     /// <summary>
@@ -96,8 +87,44 @@ public class Cat : Interactable
     {
         while(catAngerLevel > 0)
         {
+            if(intensity == 0)
+            {
+                //nice meow sound
+            }
+            else if(intensity == 1)
+            {
+                //annoyed meow sound
+            }
+            else if (intensity == 2)
+            {
+                //angry meow sound
+            }
             meow.Play();
-            yield return new WaitForSeconds(Random.Range(3f - intensity, 5f - intensity));
+            yield return new WaitForSeconds(Random.Range(3f, 5f));
+        }
+    }
+
+    IEnumerator GoToRandomSpecialLocation()
+    {
+        yield return new WaitForSeconds(1);
+        float counter = 0;
+        while(true)
+        {
+            if(gameDataScriptable.foodReady)
+            {
+                agent.SetDestination(FoodBowl.position);
+                counter = 10f;
+                feedCat();
+                yield return new WaitForSeconds(5f);
+                gameDataScriptable.foodReady = false;
+            }
+            else if(counter <= 0)
+            {
+                agent.SetDestination(specialLocations[Random.Range(0, specialLocations.Length)].transform.position);
+                counter = Random.Range(5f, 10f);
+            }
+            counter -= Time.deltaTime;
+            yield return new WaitForSeconds(Time.deltaTime);
         }
     }
 }

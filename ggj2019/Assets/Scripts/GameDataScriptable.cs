@@ -29,6 +29,7 @@ public class GameDataScriptable : ScriptableObject
 
     //Cat
     public int catAngerLevel = 0;
+    public bool foodReady = false;
     public bool fedCat = false;
 
     //Vase
