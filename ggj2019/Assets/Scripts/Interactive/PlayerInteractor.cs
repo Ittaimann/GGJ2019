@@ -72,9 +72,10 @@ public class PlayerInteractor : MonoBehaviour
         heldObject = null;
     }
 
-    public void SetHeldObject(Pickup held)
+    public void SetHeldObject(Pickup held, bool dropItem)
     {
-        Drop();
+        if(dropItem)
+            Drop();
         heldObject = held;
         Rigidbody heldRigid = held.GetComponentInParent<Rigidbody>();
         heldRigid.constraints = RigidbodyConstraints.FreezeAll;

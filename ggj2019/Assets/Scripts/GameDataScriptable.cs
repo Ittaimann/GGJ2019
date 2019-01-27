@@ -34,4 +34,7 @@ public class GameDataScriptable : ScriptableObject
 
     //Vase
     public bool isBroken = false;
+
+    //Coffee
+    public bool drankCoffee = false;
 }

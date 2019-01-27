@@ -18,7 +18,7 @@ public class Pickup : Interactable
     {
         if (heldObject == null)
         {
-            player.SetHeldObject(this);
+            player.SetHeldObject(this, true);
         }
     }
 
