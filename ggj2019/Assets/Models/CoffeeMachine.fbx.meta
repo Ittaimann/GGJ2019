@@ -1,72 +1,21 @@
 fileFormatVersion: 2
-guid: 5e44bb128d427dd49bc14c438d7c18d0
+guid: e6de111b9412b0f4a9b548b6bef027ea
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Cat:pCube1
-    100004: Head
-    100006: HeadHandle
-    100008: LBackLegHandle
-    100010: LElbow
-    100012: LFoot
-    100014: Lfoot
-    100016: LFrontLegHandle
-    100018: LHip
-    100020: LKnee
-    100022: LShoulder
-    100024: Neck
-    100026: RBackLedHandle
-    100028: Relbow
-    100030: RFoot
-    100032: RFoot 1
-    100034: RFrontLegHandle
-    100036: RHip
-    100038: RKnee
-    100040: Root
-    100042: RShoulder
-    100044: Spine1
-    100046: Spine2
-    100048: Spine3
-    100050: Spine_Handle
-    100052: Tail1
-    100054: Tail2
-    100056: Tail3
-    100058: TailHandle
+    100002: pCube1
+    100004: pCylinder1
     400000: //RootNode
-    400002: Cat:pCube1
-    400004: Head
-    400006: HeadHandle
-    400008: LBackLegHandle
-    400010: LElbow
-    400012: LFoot
-    400014: Lfoot
-    400016: LFrontLegHandle
-    400018: LHip
-    400020: LKnee
-    400022: LShoulder
-    400024: Neck
-    400026: RBackLedHandle
-    400028: Relbow
-    400030: RFoot
-    400032: RFoot 1
-    400034: RFrontLegHandle
-    400036: RHip
-    400038: RKnee
-    400040: Root
-    400042: RShoulder
-    400044: Spine1
-    400046: Spine2
-    400048: Spine3
-    400050: Spine_Handle
-    400052: Tail1
-    400054: Tail2
-    400056: Tail3
-    400058: TailHandle
-    2100000: Cat_lambert2SG1
-    4300000: Cat:pCube1
-    9500000: //RootNode
-    13700000: Cat:pCube1
+    400002: pCube1
+    400004: pCylinder1
+    2100000: lambert1
+    2300000: pCube1
+    2300002: pCylinder1
+    3300000: pCube1
+    3300002: pCylinder1
+    4300000: pCube1
+    4300002: pCylinder1
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -98,7 +47,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 0.1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -119,8 +68,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -147,7 +96,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
