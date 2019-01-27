@@ -17,22 +17,18 @@ public class DoorOpen : Interactable
     {
         if(heldObject is Keys)
         {
-            doorOpen();
             base.Interact(heldObject, player);
-            if (gameDataScriptable.fedCat
-                && gameDataScriptable.gotDressed
-                && gameDataScriptable.hasEaten
-                && gameDataScriptable.tookShower
-                && gameDataScriptable.turnedOffAlarm
-                && gameDataScriptable.turnedOnLight
-                && gameDataScriptable.usedToilet
-                && gameDataScriptable.washedDishes)
+            //if (gameDataScriptable.fedCat
+            //    && gameDataScriptable.gotDressed
+            //    && gameDataScriptable.hasEaten
+            //    && gameDataScriptable.tookShower
+            //    && gameDataScriptable.turnedOffAlarm
+            //    && gameDataScriptable.turnedOnLight
+            //    && gameDataScriptable.usedToilet
+            //    && gameDataScriptable.washedDishes)
+            if(true)
             {
-                print("you did it!");
-            }
-            else
-            {
-                SceneManager.LoadScene(0);
+                doorOpen();
             }
         }
 

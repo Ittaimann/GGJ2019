@@ -37,4 +37,7 @@ public class GameDataScriptable : ScriptableObject
 
     //Coffee
     public bool drankCoffee = false;
+
+    //Alarm
+    public bool loudAlarm = false;
 }

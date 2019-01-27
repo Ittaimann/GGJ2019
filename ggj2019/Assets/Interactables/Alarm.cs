@@ -11,8 +11,6 @@ public class Alarm : Interactable
     {
         base.Awake();
         sfx = GetComponent<AudioSource>();
-        float alarmVolume = sfx.volume;
-        Callback.DoLerp((l) => sfx.volume = alarmVolume * l, 5f, this);
     }
 
     public override void Interact(Pickup heldObject, PlayerInteractor player)
@@ -36,6 +34,16 @@ public class Alarm : Interactable
     public override void StartDay()
     {
         base.StartDay();
+        if (gameDataScriptable.loudAlarm)
+            sfx.volume = 1;
+        else
+            DoVolumeStuff();
         gameDataScriptable.turnedOffAlarm = false;
+    }
+
+    private void DoVolumeStuff()
+    {
+        float alarmVolume = sfx.volume;
+        Callback.DoLerp((l) => sfx.volume = alarmVolume * l, 5f, this);
     }
 }
