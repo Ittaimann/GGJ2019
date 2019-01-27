@@ -1,17 +1,16 @@
-﻿Shader "Custom/DepthGradient"
+﻿Shader "Custom/WorldColorChanger"
 {
     Properties
     {
-        _mainColor("main color",Color) = (1,1,1,1)  
-        _Color1 ("Color1", Color) = (1,1,1,1)
-        _Color2 ("Color2", Color) = (1,1,1,1)
-        _farPlaneRange("far plane range", range(0,5)) = 1
+        _Color ("Color", Color) = (1,1,1,1)
+        _MainTex ("Albedo (RGB)", 2D) = "white" {}
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Metallic ("Metallic", Range(0,1)) = 0.0
+        _Radius ("radius", Range(0,1)) = 0.0
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags { "RenderType"="Transparent" }
         LOD 200
 
         CGPROGRAM
@@ -21,16 +20,19 @@
         // Use shader model 3.0 target, to get nicer looking lighting
         #pragma target 3.0
 
-        sampler2D _CameraDepthTexture;
+        sampler2D _MainTex;
+
         struct Input
         {
-            float4 screenPos;
+            float2 uv_MainTex;
+            float3 worldPos;
         };
 
         half _Glossiness;
         half _Metallic;
-        fixed4 _Color1,_Color2;
-        fixed _farPlaneRange;
+        fixed4 _Color;
+        float3 _Position;
+        float _Radius;
 
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
         // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
@@ -41,14 +43,17 @@
 
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
-
-            float2 uv = IN.screenPos.xy/IN.screenPos.w;
-            float depth = Linear01Depth(SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture,uv));
             // Albedo comes from a texture tinted by color
-            o.Albedo = lerp(_Color1,_Color2,depth*_farPlaneRange);
+            float3 dist = distance(_Position,IN.worldPos);
+            float3 sphere  = 1 - saturate(dist/_Radius);
+            float3 red = step(sphere,0.1)*float3(1,0,0);
+            float3 blue = step(0.1, sphere)*float3(0,1,0);
+            float3 result = red+blue;
+            o.Albedo = result;
+            // Metallic and smoothness come from slider variables
             o.Metallic = _Metallic;
-            o.Smoothness=  _Glossiness; 
-            
+            o.Smoothness = _Glossiness;
+            o.Alpha =1;
         }
         ENDCG
     }
