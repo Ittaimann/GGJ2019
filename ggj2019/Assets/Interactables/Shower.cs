@@ -38,8 +38,8 @@ public class Shower : Interactable
 
         Quaternion initRotation = Camera.main.transform.rotation;
 
-        Camera.main.transform.position = new Vector3(5.546f, 0.8f, -2.404f);
-        Camera.main.transform.rotation = Quaternion.Euler(22.036f, 47.637f, 2.603f);
+        Camera.main.transform.position = new Vector3(5.85f, 2f, 0.69f);
+        Camera.main.transform.rotation = Quaternion.Euler(24.777f, 38.213f, 0.116f);
 
         //Play sounds of shower
         yield return new WaitForSeconds(4f);

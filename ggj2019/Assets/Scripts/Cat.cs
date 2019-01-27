@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Cat : MonoBehaviour
+public class Cat : Interactable
 {
     public List<OffMeshLink> testLinks;
 
@@ -12,13 +12,36 @@ public class Cat : MonoBehaviour
     [SerializeField]
     private Transform test = null;
 
+    private int catAngerLevel;
+    [SerializeField]
+    private AudioSource meow;
+
+    public GameDataScriptable gameDataScriptable;
+
     bool hasValidPath;
 
     Coroutine validPathCoroutine;
 
-    void Awake()
+    void Start()
     {
         validPathCoroutine = StartCoroutine(ValidPathCoroutine());
+    }
+
+    public override void StartDay()
+    {
+        base.StartDay();
+        catAngerLevel = gameDataScriptable.catAngerLevel;
+
+        if(catAngerLevel > 0)
+        {
+            StartCoroutine(AnnoyedMeow(1));
+        }
+        else if(catAngerLevel > 1)
+        {
+            StartCoroutine(AnnoyedMeow(2));
+        }
+
+
     }
 
     void Update()
@@ -47,6 +70,13 @@ public class Cat : MonoBehaviour
         MoveToPosition(hit.position);
     }
 
+    public void feedCat()
+    {
+        if(catAngerLevel > 0)
+            catAngerLevel--;
+        gameDataScriptable.fedCat = true;
+    }
+
     IEnumerator ValidPathCoroutine()
     {
         while (true)
@@ -59,6 +89,15 @@ public class Cat : MonoBehaviour
                 link.UpdatePositions();
             }
             yield return new WaitForSeconds(0.1f);
+        }
+    }
+
+    IEnumerator AnnoyedMeow(int intensity)
+    {
+        while(catAngerLevel > 0)
+        {
+            meow.Play();
+            yield return new WaitForSeconds(Random.Range(3f - intensity, 5f - intensity));
         }
     }
 }
