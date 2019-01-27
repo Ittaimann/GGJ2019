@@ -64,6 +64,7 @@ ModelImporter:
     400056: Tail3
     400058: TailHandle
     2100000: Cat_lambert2SG1
+    2100002: Cat_lambert2SG2
     4300000: Cat:pCube1
     9500000: //RootNode
     13700000: Cat:pCube1
@@ -119,7 +120,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.14999999
+    previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
