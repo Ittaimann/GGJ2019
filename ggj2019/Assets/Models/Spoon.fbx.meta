@@ -1,27 +1,14 @@
 fileFormatVersion: 2
-guid: 3c711894d98b4844181dc8ab8d61f395
+guid: 11231235aafc15940ada4224e16c2fb1
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: body
-    100002: flush
-    100004: lid
-    100006: //RootNode
-    400000: body
-    400002: flush
-    400004: lid
-    400006: //RootNode
-    2100000: lambert1
-    2100002: lambert2
-    2300000: body
-    2300002: flush
-    2300004: lid
-    3300000: body
-    3300002: flush
-    3300004: lid
-    4300000: body
-    4300002: lid
-    4300004: flush
+    100000: //RootNode
+    400000: //RootNode
+    2100000: lambert3
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pCube3
   externalObjects: {}
   materials:
     importMaterials: 1
