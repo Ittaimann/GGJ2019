@@ -5,6 +5,7 @@ using UnityEngine;
 /// <summary>
 /// A base class for providing behaviors for interactable objects. Actual interactables should probably be children of this.
 /// </summary>
+[RequireComponent(typeof(Outline))]
 public class Interactable : MonoBehaviour
 {
     [SerializeField]
@@ -19,7 +20,7 @@ public class Interactable : MonoBehaviour
 
     public bool interactable = true;
 
-    void Awake()
+    protected virtual void Awake()
     {
         // Nab outline on object, and whine if it doesn't exist.
         if (!outline)

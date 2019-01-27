@@ -1,0 +1,428 @@
+fileFormatVersion: 2
+guid: ca5faff222d24dd4b9e7ffb8a31161c4
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Alarm
+    100002: Bed
+    100004: Book
+    100006: BookParts1
+    100008: BookParts2
+    100010: coffee_table
+    100012: couch
+    100014: desk
+    100016: Dresser
+    100018: fish
+    100020: Fridge
+    100022: group
+    100024: group 1
+    100026: group1
+    100028: group14
+    100030: group15
+    100032: group2
+    100034: group20
+    100036: group21
+    100038: group22
+    100040: group3
+    100042: group4
+    100044: group8
+    100046: KitchenCounter
+    100048: NightStand
+    100050: officechair
+    100052: pasted__Book
+    100054: pasted__Book 1
+    100056: pasted__BookParts1
+    100058: pasted__group
+    100060: pasted__group13
+    100062: pasted__group13 1
+    100064: pasted__group14
+    100066: pasted__group3
+    100068: pasted__group5
+    100070: pasted__group6
+    100072: pasted__group7
+    100074: pasted__pasted__group
+    100076: pasted__pasted__group13
+    100078: pasted__pasted__group6
+    100080: pasted__pasted__pasted__pasted__pCube15
+    100082: pasted__pasted__pasted__pasted__pCube16
+    100084: pasted__pasted__pasted__pCube12
+    100086: pasted__pasted__pasted__pCube15
+    100088: pasted__pasted__pasted__pCube15 1
+    100090: pasted__pasted__pasted__pCube16
+    100092: pasted__pasted__pCube12
+    100094: pasted__pasted__pCube12 1
+    100096: pasted__pasted__pCube15
+    100098: pasted__pasted__pCube15 1
+    100100: pasted__pasted__pCube15 2
+    100102: pasted__pasted__pCube15 3
+    100104: pasted__pasted__pCube9
+    100106: pasted__pCube10
+    100108: pasted__pCube11
+    100110: pasted__pCube12
+    100112: pasted__pCube13
+    100114: pasted__pCube14
+    100116: pasted__pCube15
+    100118: pasted__pCube15 1
+    100120: pasted__pCube16
+    100122: pasted__pCube4
+    100124: pasted__pCube6
+    100126: pasted__pCube7
+    100128: pasted__pCube9
+    100130: pasted__polySurface1
+    100132: pasted__transform3
+    100134: pasted__transform4
+    100136: pasted__transform5
+    100138: pasted__transform6
+    100140: pasted__transform7
+    100142: pasted__transform8
+    100144: pasted__transform9
+    100146: pCube10
+    100148: pCube15
+    100150: pCube2
+    100152: pCube4
+    100154: pCube6
+    100156: pCube7
+    100158: pCube9
+    100160: polySurface2
+    100162: pPlane1
+    100164: RFAIPP_Bookcase_2
+    100166: RFAIPP_Gas_Stove_Base
+    100168: RFAIPP_Gas_Stove_Door
+    100170: Rug
+    100172: //RootNode
+    400000: Alarm
+    400002: Bed
+    400004: Book
+    400006: BookParts1
+    400008: BookParts2
+    400010: coffee_table
+    400012: couch
+    400014: desk
+    400016: Dresser
+    400018: fish
+    400020: Fridge
+    400022: group
+    400024: group 1
+    400026: group1
+    400028: group14
+    400030: group15
+    400032: group2
+    400034: group20
+    400036: group21
+    400038: group22
+    400040: group3
+    400042: group4
+    400044: group8
+    400046: KitchenCounter
+    400048: NightStand
+    400050: officechair
+    400052: pasted__Book
+    400054: pasted__Book 1
+    400056: pasted__BookParts1
+    400058: pasted__group
+    400060: pasted__group13
+    400062: pasted__group13 1
+    400064: pasted__group14
+    400066: pasted__group3
+    400068: pasted__group5
+    400070: pasted__group6
+    400072: pasted__group7
+    400074: pasted__pasted__group
+    400076: pasted__pasted__group13
+    400078: pasted__pasted__group6
+    400080: pasted__pasted__pasted__pasted__pCube15
+    400082: pasted__pasted__pasted__pasted__pCube16
+    400084: pasted__pasted__pasted__pCube12
+    400086: pasted__pasted__pasted__pCube15
+    400088: pasted__pasted__pasted__pCube15 1
+    400090: pasted__pasted__pasted__pCube16
+    400092: pasted__pasted__pCube12
+    400094: pasted__pasted__pCube12 1
+    400096: pasted__pasted__pCube15
+    400098: pasted__pasted__pCube15 1
+    400100: pasted__pasted__pCube15 2
+    400102: pasted__pasted__pCube15 3
+    400104: pasted__pasted__pCube9
+    400106: pasted__pCube10
+    400108: pasted__pCube11
+    400110: pasted__pCube12
+    400112: pasted__pCube13
+    400114: pasted__pCube14
+    400116: pasted__pCube15
+    400118: pasted__pCube15 1
+    400120: pasted__pCube16
+    400122: pasted__pCube4
+    400124: pasted__pCube6
+    400126: pasted__pCube7
+    400128: pasted__pCube9
+    400130: pasted__polySurface1
+    400132: pasted__transform3
+    400134: pasted__transform4
+    400136: pasted__transform5
+    400138: pasted__transform6
+    400140: pasted__transform7
+    400142: pasted__transform8
+    400144: pasted__transform9
+    400146: pCube10
+    400148: pCube15
+    400150: pCube2
+    400152: pCube4
+    400154: pCube6
+    400156: pCube7
+    400158: pCube9
+    400160: polySurface2
+    400162: pPlane1
+    400164: RFAIPP_Bookcase_2
+    400166: RFAIPP_Gas_Stove_Base
+    400168: RFAIPP_Gas_Stove_Door
+    400170: Rug
+    400172: //RootNode
+    2100000: lambert1
+    2100002: lambert2
+    2100004: Material__2146946855.031
+    2100006: Material__2146946855.059
+    2100008: Material__2146946855.074
+    2100010: lambert3
+    2100012: lambert4
+    2100014: Material__2146946855.013
+    2100016: Book
+    2100018: pasted__Book
+    2100020: BooksSet
+    2100022: pasted__BooksSet
+    2100024: BooksSet1
+    2300000: Alarm
+    2300002: Bed
+    2300004: Book
+    2300006: BookParts1
+    2300008: BookParts2
+    2300010: coffee_table
+    2300012: couch
+    2300014: desk
+    2300016: Dresser
+    2300018: fish
+    2300020: Fridge
+    2300022: KitchenCounter
+    2300024: NightStand
+    2300026: officechair
+    2300028: pasted__Book
+    2300030: pasted__Book 1
+    2300032: pasted__BookParts1
+    2300034: pasted__pasted__pasted__pasted__pCube15
+    2300036: pasted__pasted__pasted__pasted__pCube16
+    2300038: pasted__pasted__pasted__pCube15
+    2300040: pasted__pasted__pasted__pCube15 1
+    2300042: pasted__pasted__pasted__pCube16
+    2300044: pasted__pasted__pCube15
+    2300046: pasted__pasted__pCube15 1
+    2300048: pasted__pasted__pCube15 2
+    2300050: pasted__pasted__pCube15 3
+    2300052: pasted__pasted__pCube9
+    2300054: pasted__pCube10
+    2300056: pasted__pCube15
+    2300058: pasted__pCube15 1
+    2300060: pasted__pCube16
+    2300062: pasted__pCube4
+    2300064: pasted__pCube6
+    2300066: pasted__pCube7
+    2300068: pasted__pCube9
+    2300070: pasted__polySurface1
+    2300072: pCube10
+    2300074: pCube15
+    2300076: pCube2
+    2300078: pCube4
+    2300080: pCube6
+    2300082: pCube7
+    2300084: pCube9
+    2300086: polySurface2
+    2300088: pPlane1
+    2300090: RFAIPP_Bookcase_2
+    2300092: RFAIPP_Gas_Stove_Base
+    2300094: RFAIPP_Gas_Stove_Door
+    2300096: Rug
+    3300000: Alarm
+    3300002: Bed
+    3300004: Book
+    3300006: BookParts1
+    3300008: BookParts2
+    3300010: coffee_table
+    3300012: couch
+    3300014: desk
+    3300016: Dresser
+    3300018: fish
+    3300020: Fridge
+    3300022: KitchenCounter
+    3300024: NightStand
+    3300026: officechair
+    3300028: pasted__Book
+    3300030: pasted__Book 1
+    3300032: pasted__BookParts1
+    3300034: pasted__pasted__pasted__pasted__pCube15
+    3300036: pasted__pasted__pasted__pasted__pCube16
+    3300038: pasted__pasted__pasted__pCube15
+    3300040: pasted__pasted__pasted__pCube15 1
+    3300042: pasted__pasted__pasted__pCube16
+    3300044: pasted__pasted__pCube15
+    3300046: pasted__pasted__pCube15 1
+    3300048: pasted__pasted__pCube15 2
+    3300050: pasted__pasted__pCube15 3
+    3300052: pasted__pasted__pCube9
+    3300054: pasted__pCube10
+    3300056: pasted__pCube15
+    3300058: pasted__pCube15 1
+    3300060: pasted__pCube16
+    3300062: pasted__pCube4
+    3300064: pasted__pCube6
+    3300066: pasted__pCube7
+    3300068: pasted__pCube9
+    3300070: pasted__polySurface1
+    3300072: pCube10
+    3300074: pCube15
+    3300076: pCube2
+    3300078: pCube4
+    3300080: pCube6
+    3300082: pCube7
+    3300084: pCube9
+    3300086: polySurface2
+    3300088: pPlane1
+    3300090: RFAIPP_Bookcase_2
+    3300092: RFAIPP_Gas_Stove_Base
+    3300094: RFAIPP_Gas_Stove_Door
+    3300096: Rug
+    4300000: Rug
+    4300002: Bed
+    4300004: pCube2
+    4300006: pCube4
+    4300008: pasted__pCube4
+    4300010: NightStand
+    4300012: Alarm
+    4300014: couch
+    4300016: coffee_table
+    4300018: officechair
+    4300020: desk
+    4300022: Dresser
+    4300024: pCube6
+    4300026: pasted__pCube6
+    4300028: pasted__pCube7
+    4300030: pCube7
+    4300032: Fridge
+    4300034: pasted__pCube9
+    4300036: pCube9
+    4300038: pCube10
+    4300040: pasted__pCube10
+    4300042: pasted__pasted__pCube9
+    4300044: KitchenCounter
+    4300046: pasted__polySurface1
+    4300048: pasted__pCube15
+    4300050: pasted__pasted__pCube15
+    4300052: pasted__pCube16
+    4300054: pasted__pasted__pasted__pCube15
+    4300056: pCube15
+    4300058: polySurface2
+    4300060: pasted__pasted__pasted__pasted__pCube15
+    4300062: pasted__pasted__pasted__pasted__pCube16
+    4300064: pasted__pasted__pasted__pCube16
+    4300066: pasted__pCube15
+    4300068: pasted__pasted__pCube15
+    4300070: pasted__pasted__pCube15
+    4300072: pasted__pasted__pasted__pCube15
+    4300074: pasted__pasted__pCube15
+    4300076: pPlane1
+    4300078: RFAIPP_Gas_Stove_Base
+    4300080: RFAIPP_Gas_Stove_Door
+    4300082: fish
+    4300084: RFAIPP_Bookcase_2
+    4300086: Book
+    4300088: pasted__Book
+    4300090: pasted__Book
+    4300092: BookParts1
+    4300094: pasted__BookParts1
+    4300096: BookParts2
+    7400000: Take 001
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

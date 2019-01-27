@@ -25,10 +25,10 @@ public class TaskManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            EndDay();
-        }
+        //if(Input.GetKeyDown(KeyCode.E))
+        //{
+        //    EndDay();
+        //}
     }
 
 
