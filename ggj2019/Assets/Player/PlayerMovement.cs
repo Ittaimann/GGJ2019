@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 cameraEuler = Vector3.zero;
     private float distanceSinceLastStep;
     Vector3 previousPosition;
+    private PlayerInteractor interactor;
 
     [SerializeField]
     protected float distancePerFootstep = 1.5f;
@@ -32,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         cameraHolder = GetComponentInChildren<Camera>().transform;
         foostepSource = GetComponent<AudioSource>();
         previousPosition = transform.position;
+        interactor = GetComponentInChildren<PlayerInteractor>();
     }
 
     // Update is called once per frame
@@ -43,9 +45,10 @@ public class PlayerMovement : MonoBehaviour
         Vector3 input = Input.GetAxisRaw("Horizontal") * cameraHolder.right + Input.GetAxisRaw("Vertical") * Vector3.ProjectOnPlane(cameraHolder.forward, Vector3.up).normalized;
         Vector2 floorInput = maxSpeed * new Vector2(input.x, input.z);
         Vector3 targetVelocity = new Vector3(floorInput.x, rigid.velocity.y, floorInput.y);
-        rigid.AddForce(accelFactor * Time.deltaTime * (targetVelocity - rigid.velocity), ForceMode.Acceleration);
+        Vector3 force = accelFactor * Time.deltaTime * (targetVelocity - rigid.velocity);
+        rigid.AddForce(force, ForceMode.Acceleration);
 
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
@@ -59,5 +62,6 @@ public class PlayerMovement : MonoBehaviour
             foostepSource.PlayOneShot(footsteps[Random.Range(0, footsteps.Length)]);
             distanceSinceLastStep -= distancePerFootstep;
         }
+        interactor.UpdateHeldObject();
     }
 }

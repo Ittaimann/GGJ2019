@@ -6,7 +6,6 @@ public class PlayerInteractor : MonoBehaviour
 {
     private Interactable target;
     private Pickup heldObject;
-    private HingeJoint joint;
     private Rigidbody rigid;
     [SerializeField]
     protected Transform heldParent;
@@ -14,6 +13,14 @@ public class PlayerInteractor : MonoBehaviour
     void Start()
     {
         rigid = GetComponentInParent<Rigidbody>();
+    }
+
+    public void UpdateHeldObject()
+    {
+        if (heldObject != null)
+        {
+            heldObject.transform.position = heldParent.position;
+        }
     }
 
     // Update is called once per frame
@@ -59,10 +66,9 @@ public class PlayerInteractor : MonoBehaviour
         {
             return;
         }
-        Destroy(joint);
         heldObject.OnDrop();
         Rigidbody heldRigid = heldObject.GetComponentInParent<Rigidbody>();
-        heldRigid.freezeRotation = false;
+        heldRigid.constraints = RigidbodyConstraints.None;
         heldObject = null;
     }
 
@@ -70,17 +76,10 @@ public class PlayerInteractor : MonoBehaviour
     {
         Drop();
         heldObject = held;
-        joint = rigid.transform.AddComponent<HingeJoint>();
-        joint.enableCollision = false;
         Rigidbody heldRigid = held.GetComponentInParent<Rigidbody>();
-        joint.connectedBody = heldRigid;
-        joint.autoConfigureConnectedAnchor = false;
-        joint.anchor = heldParent.localPosition;
-        joint.connectedAnchor = Vector3.zero;
-        joint.useSpring = true;
+        heldRigid.constraints = RigidbodyConstraints.FreezeAll;
 
         heldRigid.MoveRotation(Quaternion.identity);
-        heldRigid.freezeRotation = true;
 
         heldObject.OnPickup();
     }
