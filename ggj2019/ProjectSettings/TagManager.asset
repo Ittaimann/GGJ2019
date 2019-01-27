@@ -13,19 +13,19 @@ TagManager:
   - UI
   - 
   - 
+  - PostProcessing
   - 
   - 
   - 
   - 
+  - Interactable
+  - Player
+  - Wall
+  - CatCanWalkThrough
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Cat
   - 
   - 
   - 

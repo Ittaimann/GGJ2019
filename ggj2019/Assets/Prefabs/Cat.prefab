@@ -15,13 +15,14 @@ GameObject:
   - component: {fileID: 4957515560906219760}
   - component: {fileID: 4957515560906219761}
   - component: {fileID: 4957515560906219762}
-  m_Layer: 0
-  m_Name: CatCube
+  - component: {fileID: 1109033869}
+  m_Layer: 20
+  m_Name: Cat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4957515560906219763
 Transform:
   m_ObjectHideFlags: 0
@@ -90,7 +91,7 @@ BoxCollider:
   m_GameObject: {fileID: 4957515560906219775}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -119,12 +120,12 @@ NavMeshAgent:
   m_GameObject: {fileID: 4957515560906219775}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.2
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 240
-  m_StoppingDistance: 1
+  m_StoppingDistance: 0.1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -144,9 +145,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 139fdc6d557182a438ac98e3bdc7ad1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 1109033869}
+  outlineFadeDuration: 0.125
+  interactable: 1
   testLinks:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   agent: {fileID: 4957515560906219761}
   test: {fileID: 0}
+  meow: {fileID: 0}
+  gameDataScriptable: {fileID: 11400000, guid: 2e6038bd3db6d174b916e37de4815a14, type: 2}
+  specialLocations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  FoodBowl: {fileID: 0}
+--- !u!114 &1109033869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4957515560906219775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.5423231, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
