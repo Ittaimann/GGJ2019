@@ -12,6 +12,6 @@ public class Fridge : Interactable
         if (heldObject is RawFood)
             return;
         player.Drop();
-        player.SetHeldObject(Instantiate(foodPrefab, player.transform.position, Quaternion.identity));
+        player.SetHeldObject(Instantiate(foodPrefab, player.transform.position, Quaternion.identity), true);
     }
 }

@@ -7,10 +7,12 @@ public class TaskManager : MonoBehaviour
 {
 
     //public ScriptableObject gameData;
-    public Interactable[] objects;
+    private Interactable[] objects;
+    public GameDataScriptable gameDataScriptable;
 
     private void Start()
     {
+        objects = FindObjectsOfType<Interactable>();
         StartDay();
     }
 
@@ -35,12 +37,22 @@ public class TaskManager : MonoBehaviour
     public void EndDay()
     {
         //Check all data needed inside of gameData scriptable object
+        /*
+        if (gameDataScriptable.fedCat
+            && gameDataScriptable.gotDressed
+            && gameDataScriptable.hasEaten
+            && gameDataScriptable.tookShower
+            && gameDataScriptable.turnedOffAlarm
+            && gameDataScriptable.turnedOnLight
+            && gameDataScriptable.usedToilet
+            && gameDataScriptable.washedDishes)
+            */
+            if(true)
+        {
+            SceneManager.LoadScene(1);
 
-        //if(allChecksOut)
-        //{
-        //    GoToEndScene();
-        //}
-        //else
+        }
+        else
         {
             //Reload the scene and call the start Day again
             SceneManager.LoadScene(0);
