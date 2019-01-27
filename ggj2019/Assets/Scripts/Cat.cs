@@ -89,13 +89,28 @@ public class Cat : Interactable
 
                 Vector3 rootPos = animator.rootPosition;
 
-                if ((goingUp && (endNode.y - rootPos.y) < upAnimLoopUntilY) || (!goingUp && rootPos.y - endNode.y >= downAnimLoopUntilY))
+                if (((goingUp && (endNode.y - rootPos.y) < upAnimLoopUntilY) || (!goingUp && rootPos.y - endNode.y < downAnimLoopUntilY)) && !animator.GetBool("FinishJump"))
                 {
                     animator.SetBool("FinishJump", true);
                     animator.SetBool(goingUp ? "StartUpJump" : "StartDownJump", false);
+
+                    // Last minute fix -- force position
+                    if (goingUp)
+                    {
+                        // transform.LookAt(new Vector3(endNode.x, transform.position.y, endNode.z));
+                        Vector3 forcePoint = new Vector3(0, 1.57789278f, 1.2987907f);
+                        transform.position = endNode - (transform.forward * forcePoint.z + transform.up * forcePoint.y);
+                        // transform.localPosition -= forcePoint;
+                    }
+                    else
+                    {
+                        Vector3 forcePoint = new Vector3(0, -1.32479946f, 1.027637f);
+                        transform.position = endNode - (transform.forward * forcePoint.z + transform.up * forcePoint.y);
+                        // transform.localPosition -= forcePoint;
+                    }
+                    // Debug.Log("womp");
                 }
             }
-            
 
             afterJumpFinish = animator.GetBool("AfterJumpFinish");
             if (afterJumpFinish)
