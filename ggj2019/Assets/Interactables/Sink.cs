@@ -7,6 +7,7 @@ public class Sink : Interactable
     private AudioSource sfx;
     private ParticleSystem vfx;
     private Dish dish;
+    public GameDataScriptable gameDataScriptable;
 
     protected override void Awake()
     {
@@ -28,6 +29,13 @@ public class Sink : Interactable
             //dish.clean = true;
             sfx.Play();
             vfx.Play();
+            gameDataScriptable.washedDishes = true;
         }
+    }
+
+    public override void StartDay()
+    {
+        base.StartDay();
+        gameDataScriptable.washedDishes = false;
     }
 }

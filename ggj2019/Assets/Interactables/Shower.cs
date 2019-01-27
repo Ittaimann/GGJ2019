@@ -18,7 +18,6 @@ public class Shower : Interactable
         if (gameDataScriptable.gotDressed)
             gameDataScriptable.gotDressed = false;
         gameDataScriptable.tookShower = true;
-        this.enabled = false;
     }
 
 }

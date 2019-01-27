@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Alarm : Interactable
 {
+    public GameDataScriptable gameDataScriptable;
     private AudioSource sfx;
 
     protected override void Awake()
@@ -20,14 +21,21 @@ public class Alarm : Interactable
         if(sfx.isPlaying)
         {
             sfx.Stop();
+            gameDataScriptable.turnedOffAlarm = true;
         }
         else
         {
             float alarmVolume = sfx.volume;
             Callback.DoLerp((l) => sfx.volume = alarmVolume * l, 5f, this);
             sfx.Play();
+            gameDataScriptable.turnedOffAlarm = false;
 
         }
-        //tick alarm complete
+    }
+
+    public override void StartDay()
+    {
+        base.StartDay();
+        gameDataScriptable.turnedOffAlarm = false;
     }
 }
