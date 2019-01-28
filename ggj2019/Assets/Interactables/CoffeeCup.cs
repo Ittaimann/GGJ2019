@@ -25,12 +25,22 @@ public class CoffeeCup : Pickup
         {
             if (!drinking)
                 StartCoroutine(DrinkCoffee());
+            else
+            {
+                StartCoroutine(regrab());
+            }
             drinking = true;
         }
         else if (!drinking)
         {
             base.OnDrop();
         }
+    }
+
+    private IEnumerator regrab()
+    {
+        yield return new WaitForEndOfFrame();
+        Camera.main.GetComponent<PlayerInteractor>().SetHeldObject(this, false);
     }
 
     private IEnumerator DrinkCoffee()

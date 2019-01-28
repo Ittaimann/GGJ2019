@@ -12,15 +12,11 @@ public class Dish : Pickup
 
     public Texture dirtyTex;
 
-    private void Start()
-    {
-        meshRenderer = GetComponentInChildren<MeshRenderer>();
-    }
-
     public override void StartDay()
     {
         base.StartDay();
         gameDataScriptable.hasEaten = false;
+        meshRenderer = GetComponent<MeshRenderer>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -40,8 +36,16 @@ public class Dish : Pickup
     {
         if (hasFood)
         {
+            print("has food");
             if (!eating)
+            {
+                print("eat");
                 StartCoroutine(Eat());
+            }
+            else
+            {
+                StartCoroutine(regrab());
+            }
             eating = true;
         }
         else if (!eating)
@@ -54,8 +58,13 @@ public class Dish : Pickup
     {
         //Change the model
         food.SetActive(true);
-        print("picked up food");
         hasFood = true;
+    }
+
+    private IEnumerator regrab()
+    {
+        yield return new WaitForEndOfFrame();
+        Camera.main.GetComponent<PlayerInteractor>().SetHeldObject(this, false);
     }
 
     private IEnumerator Eat()
@@ -63,9 +72,7 @@ public class Dish : Pickup
         yield return new WaitForEndOfFrame();
         Camera.main.GetComponent<PlayerInteractor>().SetHeldObject(this, false);
         //Play sound of coffee drinking
-        print("eating");
         yield return new WaitForSeconds(3f);
-        print("done");
         food.SetActive(false);
         gameDataScriptable.hasEaten = true;
         hasFood = false;

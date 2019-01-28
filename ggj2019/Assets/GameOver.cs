@@ -6,6 +6,7 @@ public class GameOver : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
+        print("test");
         Application.Quit();
     }
 }

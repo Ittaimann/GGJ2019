@@ -10,17 +10,13 @@ public class Vase : Pickup
     public override void StartDay()
     {
 
-        print("running?");
         if (gameDataScriptable.isBroken)
         {
-            print("??");
             broken.SetActive(true);
             notBroken.SetActive(false);
         }
         else
         {
-
-            print("here");
             broken.SetActive(false);
             notBroken.SetActive(true);
         }

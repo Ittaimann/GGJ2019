@@ -41,13 +41,11 @@ public class TaskManager : MonoBehaviour
 
     private IEnumerator DayTimer()
     {
-        print("going");
         yield return new WaitForSeconds(60f);
         float counter = 0f;
         alarm.Play();
         while(counter < 3)
         {
-            print("counter: " + counter);
             alarm.volume = Mathf.Lerp(0, 1, counter / 3f);
             yield return new WaitForSeconds(0.02f);
             counter += 0.02f;
@@ -57,30 +55,22 @@ public class TaskManager : MonoBehaviour
     }
 
 
-    public void EndDay()
-    {
-        StopCoroutine(day);
-        //Check all data needed inside of gameData scriptable object
-        /*
-        if (gameDataScriptable.fedCat
-            && gameDataScriptable.gotDressed
-            && gameDataScriptable.hasEaten
-            && gameDataScriptable.tookShower
-            && gameDataScriptable.turnedOffAlarm
-            && gameDataScriptable.turnedOnLight
-            && gameDataScriptable.usedToilet
-            && gameDataScriptable.washedDishes)
-            */
-            if(true)
-        {
-            //SceneManager.LoadScene(1);
-            gameDataScriptable.loudAlarm = false;
+    //public void EndDay()
+    //{
+    //    StopCoroutine(day);
+    //    //Check all data needed inside of gameData scriptable object
+    //    if (gameDataScriptable.fedCat
+    //        && gameDataScriptable.gotDressed
+    //        && gameDataScriptable.hasEaten
+    //        && gameDataScriptable.tookShower
+    //        && gameDataScriptable.turnedOffAlarm
+    //        && gameDataScriptable.turnedOnLight
+    //        && gameDataScriptable.usedToilet
+    //        && gameDataScriptable.washedDishes)
+    //    {
+    //        //SceneManager.LoadScene(1);
+    //        gameDataScriptable.loudAlarm = false;
 
-        }
-        else
-        {
-            //Reload the scene and call the start Day again
-            SceneManager.LoadScene(0);
-        }
-    }
+    //    }
+    //}
 }

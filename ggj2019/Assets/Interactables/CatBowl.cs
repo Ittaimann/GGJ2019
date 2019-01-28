@@ -10,7 +10,6 @@ public class CatBowl : Interactable
     public override void StartDay()
     {
         base.StartDay();
-        print("resetr");
         gameDataScriptable.foodReady = false;
     }
 
