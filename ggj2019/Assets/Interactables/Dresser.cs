@@ -16,6 +16,7 @@ public class Dresser : Interactable
     public override void Interact(Pickup heldObject, PlayerInteractor player)
     {
         gameDataScriptable.gotDressed = true;
+        GetComponent<AudioSource>().Play();
         this.enabled = false;
     }
 }

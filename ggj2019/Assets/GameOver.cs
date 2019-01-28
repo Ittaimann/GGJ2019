@@ -9,4 +9,12 @@ public class GameOver : MonoBehaviour
         print("test");
         Application.Quit();
     }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
 }
