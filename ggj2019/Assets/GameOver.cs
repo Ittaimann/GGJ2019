@@ -6,8 +6,11 @@ public class GameOver : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        print("test");
-        Application.Quit();
+        if(collision.transform.tag == "Player")
+        {
+            Application.Quit();
+            print("quit");
+        }
     }
 
     private void Update()

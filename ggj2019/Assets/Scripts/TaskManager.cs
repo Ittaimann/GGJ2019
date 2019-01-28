@@ -41,6 +41,7 @@ public class TaskManager : MonoBehaviour
 
     private IEnumerator DayTimer()
     {
+        print("starting");
         yield return new WaitForSeconds(60f);
         float counter = 0f;
         alarm.Play();
